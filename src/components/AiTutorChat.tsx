@@ -64,7 +64,7 @@ interface ChatMessage {
 }
 
 interface AiTutorChatProps {
-  onNavigateTab?: (tab: 'knowledge' | 'globe' | 'map' | 'vietnam' | 'games' | 'tourism' | 'prompts' | 'assistant') => void;
+  onNavigateTab?: (tab: 'knowledge' | 'globe' | 'map' | 'vietnam' | 'games' | 'interactive' | 'tourism' | 'assistant') => void;
   onResetPoints?: () => void;
 }
 

@@ -11,7 +11,6 @@ import { VietnamConnection } from './components/VietnamConnection';
 import { GameHub } from './components/GameHub';
 import { MekongKnowledgeHub } from './components/MekongKnowledgeHub';
 import { MekongTourismGallery } from './components/MekongTourismGallery';
-import { PromptLessonGuide } from './components/PromptLessonGuide';
 import { AiTutorChat } from './components/AiTutorChat';
 import { MekongInteractiveHub } from './components/MekongInteractiveHub';
 import { MekongProgressTracker } from './components/MekongProgressTracker';
@@ -28,7 +27,7 @@ import {
 } from 'lucide-react';
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<'knowledge' | 'globe' | 'map' | 'vietnam' | 'games' | 'interactive' | 'tourism' | 'prompts' | 'assistant'>('knowledge');
+  const [activeTab, setActiveTab] = useState<'knowledge' | 'globe' | 'map' | 'vietnam' | 'games' | 'interactive' | 'tourism' | 'assistant'>('knowledge');
   const [selectedGame, setSelectedGame] = useState<'simulator' | 'estuary' | 'quiz' | 'country'>('simulator');
   const [userPoints, setUserPoints] = useState<number>(() => {
     const saved = localStorage.getItem('mekong_geo_points');
@@ -133,10 +132,6 @@ export default function App() {
           <MekongTourismGallery />
         )}
 
-        {activeTab === 'prompts' && (
-          <PromptLessonGuide />
-        )}
-
         {activeTab === 'assistant' && (
           <AiTutorChat 
             onNavigateTab={setActiveTab}
@@ -218,9 +213,6 @@ export default function App() {
               <button onClick={() => setActiveTab('assistant')} className="hover:text-orange-400 transition-colors flex items-center gap-1 cursor-pointer">
                 <Lightbulb className="w-3 h-3 text-orange-400" />
                 Chatbot Kiến Sáng
-              </button>
-              <button onClick={() => setActiveTab('prompts')} className="hover:text-orange-400 transition-colors cursor-pointer">
-                Giáo Án & Prompt
               </button>
             </div>
           </div>

@@ -13,13 +13,13 @@ import {
 } from 'lucide-react';
 
 interface NavbarProps {
-  activeTab: 'knowledge' | 'globe' | 'map' | 'vietnam' | 'games' | 'interactive' | 'tourism' | 'prompts' | 'assistant';
-  setActiveTab: (tab: 'knowledge' | 'globe' | 'map' | 'vietnam' | 'games' | 'interactive' | 'tourism' | 'prompts' | 'assistant') => void;
+  activeTab: 'knowledge' | 'globe' | 'map' | 'vietnam' | 'games' | 'interactive' | 'tourism' | 'assistant';
+  setActiveTab: (tab: 'knowledge' | 'globe' | 'map' | 'vietnam' | 'games' | 'interactive' | 'tourism' | 'assistant') => void;
   userPoints: number;
 }
 
 interface NavItem {
-  id: 'knowledge' | 'interactive' | 'globe' | 'map' | 'vietnam' | 'tourism' | 'prompts' | 'assistant';
+  id: 'knowledge' | 'interactive' | 'globe' | 'map' | 'vietnam' | 'tourism' | 'assistant';
   label: string;
   icon: React.ElementType;
   highlight?: boolean;
@@ -34,7 +34,6 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, userPoi
     { id: 'vietnam', label: 'Liên Hệ Việt Nam', icon: Waves },
     { id: 'tourism', label: 'Du Lịch ĐBSCL', icon: Camera },
     { id: 'assistant', label: 'Chatbot Kiến Sáng', icon: Lightbulb },
-    { id: 'prompts', label: 'Giáo Án & Prompt', icon: Sparkles },
   ];
 
   return (
