@@ -40,15 +40,15 @@ export const MekongTourismGallery: React.FC = () => {
   return (
     <div className="space-y-6">
       {/* Tourism Hero Banner */}
-      <div className="bg-gradient-to-r from-teal-900 via-sky-900 to-indigo-950 text-white rounded-2xl p-6 sm:p-8 shadow-sm relative overflow-hidden">
+      <div className="bg-gradient-to-r from-blue-950 via-blue-900 to-orange-900 text-white rounded-2xl p-6 sm:p-8 shadow-sm border border-orange-500/40 relative overflow-hidden">
         <div className="relative z-10 max-w-3xl space-y-3">
           <div className="flex flex-wrap items-center gap-2">
-            <span className="px-3 py-1 rounded-full text-xs font-bold bg-amber-400 text-slate-950 flex items-center gap-1">
+            <span className="px-3 py-1 rounded-full text-xs font-bold bg-orange-500 text-white flex items-center gap-1">
               <Sparkles className="w-3.5 h-3.5" />
               Bộ Sưu Tập Du Lịch • Google AI Studio
             </span>
-            <span className="text-xs text-sky-200 flex items-center gap-1">
-              <School className="w-3.5 h-3.5" />
+            <span className="text-xs text-blue-100 flex items-center gap-1">
+              <School className="w-3.5 h-3.5 text-orange-400" />
               TH, THCS, THPT FPT Hậu Giang
             </span>
           </div>
@@ -57,12 +57,12 @@ export const MekongTourismGallery: React.FC = () => {
             Vẻ Đẹp Du Lịch Sông Mê Công & Đồng Bằng Sông Cửu Long
           </h1>
 
-          <p className="text-xs sm:text-sm text-sky-100 leading-relaxed">
+          <p className="text-xs sm:text-sm text-blue-100 leading-relaxed">
             Khám phá vẻ đẹp huyền diệu của "Dòng sông Mẹ" khi đổ về hạ lưu Việt Nam: từ chợ nổi rộn rã trên sông Cần Thơ, 
             rừng tràm Trà Sư xanh biếc bạt ngàn mùa nước nổi đến ánh hoàng hôn vàng ruộm trên kênh xáng Xà No – Vị Thủy.
           </p>
 
-          <div className="pt-2 flex flex-wrap items-center gap-2 text-xs text-amber-300 font-semibold">
+          <div className="pt-2 flex flex-wrap items-center gap-2 text-xs text-orange-300 font-semibold">
             <span>📍 Tọa độ xuất phát: 61C ấp 6, xã Vị Thủy, TP.Cần Thơ</span>
             <span>•</span>
             <span>Tích hợp nội dung Du lịch Địa lí 11</span>
@@ -76,10 +76,10 @@ export const MekongTourismGallery: React.FC = () => {
           <button
             key={c.id}
             onClick={() => setFilterTag(c.id)}
-            className={`px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all ${
+            className={`px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all cursor-pointer ${
               filterTag === c.id
-                ? 'bg-sky-600 text-white shadow-xs'
-                : 'bg-white border border-slate-200 text-slate-700 hover:bg-slate-50'
+                ? 'bg-gradient-to-r from-orange-500 to-emerald-600 text-white shadow-xs'
+                : 'bg-white border border-emerald-200 text-emerald-950 hover:bg-orange-50'
             }`}
           >
             {c.label}

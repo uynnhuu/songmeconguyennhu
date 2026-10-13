@@ -53,25 +53,34 @@ export const MekongProgressTracker: React.FC<MekongProgressTrackerProps> = ({
   ];
 
   return (
-    <div className="bg-white/95 backdrop-blur-md rounded-2xl border border-sky-200/80 p-3 sm:p-4 shadow-sm">
+    <div className="bg-white/95 backdrop-blur-md rounded-2xl border border-orange-200/90 p-3 sm:p-4 shadow-sm">
       <div className="flex flex-wrap items-center justify-between gap-3">
         {/* Left: Overall Title & Progress Bar */}
         <div className="flex items-center gap-3 flex-1 min-w-[260px]">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-600 text-white flex items-center justify-center font-black shadow-xs shrink-0">
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-orange-500 to-emerald-600 text-white flex items-center justify-center font-black shadow-xs shrink-0">
             🌊
           </div>
           <div className="flex-1">
-            <div className="flex items-center justify-between text-xs mb-1">
-              <span className="font-extrabold text-slate-800 flex items-center gap-1.5">
-                <span>Khám Phá Mê Công:</span>
-                <span className="text-cyan-700 font-bold">{completedCount}/6 Mục Đã Học</span>
-              </span>
-              <span className="font-black text-blue-700 font-mono text-xs">{pct}%</span>
+            <div className="flex flex-wrap items-center justify-between text-xs mb-1 gap-1">
+              <div className="flex items-center gap-1.5 flex-wrap">
+                <span className="font-extrabold text-emerald-950">
+                  Tiến Độ Học Tập:
+                </span>
+                <span className="text-[11px] font-bold text-orange-900 bg-orange-100/90 px-2 py-0.5 rounded-md border border-orange-300 inline-flex items-center gap-1">
+                  <span>Học sinh:</span>
+                  <span className="text-emerald-950 font-black">Lê Lê Uyển Như</span>
+                  <span className="text-orange-800 font-mono text-[10px] bg-white px-1 rounded border border-orange-200">FHG30019</span>
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-orange-600 font-bold">{completedCount}/6 Đã Học</span>
+                <span className="font-black text-emerald-700 font-mono text-xs">{pct}%</span>
+              </div>
             </div>
             {/* Progress Track */}
-            <div className="w-full bg-slate-100 rounded-full h-2 overflow-hidden border border-slate-200/60">
+            <div className="w-full bg-emerald-50 rounded-full h-2 overflow-hidden border border-emerald-200/60">
               <div 
-                className="h-full bg-gradient-to-r from-cyan-400 via-teal-400 to-blue-600 transition-all duration-700 rounded-full"
+                className="h-full bg-gradient-to-r from-orange-500 via-orange-400 to-emerald-600 transition-all duration-700 rounded-full"
                 style={{ width: `${pct}%` }}
               />
             </div>
@@ -86,7 +95,7 @@ export const MekongProgressTracker: React.FC<MekongProgressTrackerProps> = ({
               title={`${b.name}: ${b.description} (${b.unlocked ? 'Đã đạt' : 'Chưa mở'})`}
               className={`px-2 py-1 rounded-lg text-[11px] font-bold flex items-center gap-1 border transition-all ${
                 b.unlocked
-                  ? 'bg-amber-100/90 text-amber-900 border-amber-300 shadow-xs'
+                  ? 'bg-orange-100/90 text-orange-900 border-orange-300 shadow-xs'
                   : 'bg-slate-100 text-slate-400 border-slate-200 opacity-60'
               }`}
             >
@@ -99,7 +108,7 @@ export const MekongProgressTracker: React.FC<MekongProgressTrackerProps> = ({
         {/* Right: Quick Review Button */}
         <button
           onClick={() => setShowDetailModal(!showDetailModal)}
-          className="px-3 py-1.5 rounded-xl bg-sky-50 hover:bg-sky-100 text-sky-800 font-bold text-xs border border-sky-200 transition-colors cursor-pointer shrink-0"
+          className="px-3 py-1.5 rounded-xl bg-gradient-to-r from-orange-500 to-emerald-600 hover:from-orange-600 hover:to-emerald-700 text-white font-bold text-xs shadow-xs transition-all cursor-pointer shrink-0"
         >
           {showDetailModal ? 'Thu Gọn Tiến Độ' : 'Chi Tiết 6 Chặng 🏆'}
         </button>
@@ -107,7 +116,7 @@ export const MekongProgressTracker: React.FC<MekongProgressTrackerProps> = ({
 
       {/* Expanded Progress Detail Modal / Drawer */}
       {showDetailModal && (
-        <div className="mt-4 pt-3 border-t border-slate-100 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2">
+        <div className="mt-4 pt-3 border-t border-emerald-100 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2">
           {modulesList.map((m) => {
             const isDone = progress[m.key as keyof MekongModuleProgress];
             return (
@@ -118,16 +127,16 @@ export const MekongProgressTracker: React.FC<MekongProgressTrackerProps> = ({
                 }}
                 className={`p-2.5 rounded-xl border text-left transition-all cursor-pointer ${
                   isDone
-                    ? 'bg-emerald-50 border-emerald-300 text-emerald-950 font-bold'
-                    : 'bg-slate-50 border-slate-200 text-slate-600 hover:bg-slate-100'
+                    ? 'bg-orange-50 border-orange-300 text-orange-950 font-bold'
+                    : 'bg-emerald-50/50 border-emerald-200 text-emerald-900 hover:bg-orange-50/70'
                 }`}
               >
                 <div className="flex items-center justify-between text-xs mb-1">
                   <span>{m.icon}</span>
                   {isDone ? (
-                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-orange-600" />
                   ) : (
-                    <span className="text-[10px] text-slate-400">Chưa xong</span>
+                    <span className="text-[10px] text-emerald-600">Chưa xong</span>
                   )}
                 </div>
                 <div className="text-[11px] font-extrabold truncate">

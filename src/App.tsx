@@ -65,7 +65,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col font-sans text-slate-900 selection:bg-sky-200 selection:text-sky-900">
+    <div className="min-h-screen bg-emerald-50/35 flex flex-col font-sans text-slate-900 selection:bg-orange-200 selection:text-emerald-950">
       {/* Top Main Navigation */}
       <Navbar 
         activeTab={activeTab} 
@@ -171,11 +171,11 @@ export default function App() {
       )}
 
       {/* Footer */}
-      <footer className="bg-slate-900 text-white border-t border-slate-800 mt-12 py-8">
+      <footer className="bg-emerald-950 text-white border-t-4 border-orange-500 mt-12 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap items-center justify-between gap-6 pb-6 border-b border-slate-800">
+          <div className="flex flex-wrap items-center justify-between gap-6 pb-6 border-b border-emerald-900">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-sky-500 to-indigo-700 flex items-center justify-center text-white font-bold shadow-md">
+              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-orange-500 to-emerald-600 flex items-center justify-center text-white font-bold shadow-md">
                 <Compass className="w-6 h-6" />
               </div>
               <div>
@@ -183,54 +183,74 @@ export default function App() {
                   <h3 className="font-black text-lg tracking-tight">
                     Sông Mê Công
                   </h3>
-                  <span className="px-2 py-0.5 rounded-md text-[11px] font-bold bg-amber-400 text-slate-950">
+                  <span className="px-2 py-0.5 rounded-md text-[11px] font-bold bg-orange-500 text-white">
                     Địa Lí 11
                   </span>
                 </div>
-                <p className="text-xs text-slate-300 mt-0.5 flex items-center gap-1.5">
-                  <School className="w-3.5 h-3.5 text-sky-400" />
+                <p className="text-xs text-emerald-200 mt-0.5 flex items-center gap-1.5">
+                  <School className="w-3.5 h-3.5 text-orange-400" />
                   Trường TH, THCS, THPT FPT Hậu Giang
                 </p>
-                <p className="text-[11px] text-slate-400 flex items-center gap-1.5 mt-0.5">
-                  <MapPin className="w-3.5 h-3.5 text-amber-400" />
+                <p className="text-[11px] text-emerald-300 flex items-center gap-1.5 mt-0.5">
+                  <MapPin className="w-3.5 h-3.5 text-orange-400" />
                   Địa chỉ cập nhật: 61C ấp 6, xã Vị Thủy, TP.Cần Thơ
                 </p>
               </div>
             </div>
 
             {/* Fast Links */}
-            <div className="flex flex-wrap items-center gap-4 text-xs font-medium text-slate-300">
-              <button onClick={() => setActiveTab('knowledge')} className="hover:text-amber-300 transition-colors">
-                Kiến Thức SGK 11
+            <div className="flex flex-wrap items-center gap-4 text-xs font-medium text-emerald-200">
+              <button onClick={() => setActiveTab('knowledge')} className="hover:text-orange-400 transition-colors cursor-pointer">
+                Kiến Thức Sông Mê Công
               </button>
-              <button onClick={() => setActiveTab('globe')} className="hover:text-cyan-400 transition-colors text-cyan-300 font-bold flex items-center gap-1">
+              <button onClick={() => setActiveTab('globe')} className="hover:text-orange-300 transition-colors text-orange-400 font-bold flex items-center gap-1 cursor-pointer">
                 <span>Quả Địa Cầu 3D</span>
               </button>
-              <button onClick={() => setActiveTab('map')} className="hover:text-sky-400 transition-colors">
+              <button onClick={() => setActiveTab('map')} className="hover:text-orange-400 transition-colors cursor-pointer">
                 Bản Đồ Lưu Vực
               </button>
-              <button onClick={() => setActiveTab('vietnam')} className="hover:text-sky-400 transition-colors">
+              <button onClick={() => setActiveTab('vietnam')} className="hover:text-orange-400 transition-colors cursor-pointer">
                 Liên Hệ ĐBSCL
               </button>
-              <button onClick={() => setActiveTab('tourism')} className="hover:text-sky-400 transition-colors">
+              <button onClick={() => setActiveTab('tourism')} className="hover:text-orange-400 transition-colors cursor-pointer">
                 Du Lịch ĐBSCL
               </button>
-              <button onClick={() => setActiveTab('assistant')} className="hover:text-sky-400 transition-colors flex items-center gap-1">
-                <Lightbulb className="w-3 h-3 text-amber-400" />
+              <button onClick={() => setActiveTab('assistant')} className="hover:text-orange-400 transition-colors flex items-center gap-1 cursor-pointer">
+                <Lightbulb className="w-3 h-3 text-orange-400" />
                 Chatbot Kiến Sáng
               </button>
-              <button onClick={() => setActiveTab('prompts')} className="hover:text-sky-400 transition-colors">
+              <button onClick={() => setActiveTab('prompts')} className="hover:text-orange-400 transition-colors cursor-pointer">
                 Giáo Án & Prompt
               </button>
             </div>
           </div>
 
-          <div className="flex flex-wrap items-center justify-between gap-4 pt-4 text-[11px] text-slate-500">
-            <p>© 2026 Sông Mê Công • Dự án học tập tương tác số hóa Trường TH, THCS, THPT FPT Hậu Giang.</p>
+          <div className="my-4 p-3.5 rounded-2xl bg-emerald-900/50 border border-orange-500/40 flex flex-wrap items-center justify-between gap-3 text-xs">
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-orange-500 to-amber-500 text-white font-black flex items-center justify-center text-xs shadow-sm">
+                UN
+              </div>
+              <div>
+                <span className="text-orange-300 font-semibold block sm:inline">Học sinh thực hiện dự án: </span>
+                <strong className="text-white text-sm">Lê Lê Uyển Như</strong>
+                <span className="mx-2 text-emerald-400 hidden sm:inline">•</span>
+                <span className="text-orange-200 block sm:inline mt-0.5 sm:mt-0">
+                  MSHS: <strong className="font-mono text-white bg-orange-950/90 px-2 py-0.5 rounded border border-orange-500/50">FHG30019</strong>
+                </span>
+              </div>
+            </div>
+            <div className="text-emerald-200 flex items-center gap-1.5 font-medium">
+              <School className="w-3.5 h-3.5 text-orange-400 shrink-0" />
+              <span>Trường TH, THCS, THPT FPT Hậu Giang</span>
+            </div>
+          </div>
+
+          <div className="flex flex-wrap items-center justify-between gap-4 pt-2 text-[11px] text-emerald-300/80">
+            <p>© 2026 Sông Mê Công • Học sinh Lê Lê Uyển Như (MSHS: FHG30019) • Trường TH, THCS, THPT FPT Hậu Giang.</p>
             <p className="flex items-center gap-1.5">
-              <span>Được thiết kế trên Google AI Studio Build</span>
+              <span className="text-orange-400 font-semibold">Chuyên đề Địa lí 11</span>
               <span>•</span>
-              <span className="text-sky-400">Nghị quyết 120/NQ-CP "Thuận thiên"</span>
+              <span className="text-emerald-300">Nghị quyết 120/NQ-CP "Thuận thiên"</span>
             </p>
           </div>
         </div>

@@ -15,14 +15,14 @@
 
   <style>
     :root {
-      --bg-dark: #020617;
-      --panel-bg: rgba(11, 19, 38, 0.82);
-      --panel-border: rgba(56, 189, 248, 0.35);
-      --panel-glow: rgba(56, 189, 248, 0.15);
-      --neon-cyan: #00f0ff;
-      --neon-amber: #f59e0b;
-      --neon-emerald: #10b981;
-      --neon-rose: #f43f5e;
+      --bg-dark: #061812;
+      --panel-bg: rgba(10, 32, 22, 0.88);
+      --panel-border: rgba(249, 115, 22, 0.45);
+      --panel-glow: rgba(16, 185, 129, 0.22);
+      --primary-orange: #f97316;
+      --primary-orange-dark: #ea580c;
+      --primary-green: #10b981;
+      --accent-green: #34d399;
       --text-main: #f8fafc;
       --text-muted: #94a3b8;
       --font-cyber: 'Rajdhani', sans-serif;
@@ -105,11 +105,11 @@
       width: 38px;
       height: 38px;
       border-radius: 50%;
-      background: radial-gradient(circle, #38bdf8, #0284c7);
+      background: linear-gradient(135deg, #f97316, #10b981);
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 0 16px rgba(56, 189, 248, 0.6);
+      box-shadow: 0 0 16px rgba(249, 115, 22, 0.65);
       font-size: 20px;
     }
 
@@ -127,8 +127,8 @@
     .brand-subtitle {
       font-family: var(--font-ui);
       font-size: 11px;
-      font-weight: 500;
-      color: #38bdf8;
+      font-weight: 600;
+      color: #fb923c;
       letter-spacing: 0.5px;
     }
 
@@ -162,18 +162,18 @@
     }
 
     .cyber-btn:hover {
-      border-color: #38bdf8;
-      background: rgba(56, 189, 248, 0.2);
+      border-color: #f97316;
+      background: rgba(249, 115, 22, 0.22);
       color: #fff;
-      box-shadow: 0 0 16px rgba(56, 189, 248, 0.4);
+      box-shadow: 0 0 16px rgba(249, 115, 22, 0.45);
       transform: translateY(-1px);
     }
 
     .cyber-btn.active {
-      background: linear-gradient(135deg, rgba(2, 132, 199, 0.4), rgba(56, 189, 248, 0.3));
-      border-color: #38bdf8;
+      background: linear-gradient(135deg, #f97316, #2563eb);
+      border-color: #fb923c;
       color: #fff;
-      box-shadow: 0 0 18px rgba(56, 189, 248, 0.45);
+      box-shadow: 0 0 18px rgba(249, 115, 22, 0.5);
     }
 
     /* ==========================================================================
@@ -218,10 +218,10 @@
     }
 
     .weather-pill.active {
-      background: #0284c7;
+      background: linear-gradient(135deg, #f97316, #2563eb);
       color: #fff;
-      font-weight: 600;
-      box-shadow: 0 0 12px rgba(2, 132, 199, 0.6);
+      font-weight: 700;
+      box-shadow: 0 0 14px rgba(249, 115, 22, 0.6);
     }
 
     /* ==========================================================================
@@ -260,7 +260,7 @@
       font-size: 13px;
       font-weight: 700;
       letter-spacing: 1.2px;
-      color: #38bdf8;
+      color: #fb923c;
       text-transform: uppercase;
       display: flex;
       align-items: center;
@@ -271,8 +271,8 @@
     .section-title::after {
       content: '';
       flex: 1;
-      height: 1px;
-      background: linear-gradient(90deg, rgba(56, 189, 248, 0.4), transparent);
+      height: 1.5px;
+      background: linear-gradient(90deg, #f97316, #2563eb, transparent);
     }
 
     /* Search & Autocomplete */
@@ -281,14 +281,14 @@
       display: flex;
       align-items: center;
       background: rgba(15, 23, 42, 0.85);
-      border: 1px solid rgba(56, 189, 248, 0.4);
+      border: 1px solid rgba(249, 115, 22, 0.45);
       border-radius: 10px;
       padding: 4px 6px 4px 12px;
       transition: all 0.25s ease;
     }
     .search-input-box:focus-within {
-      border-color: #38bdf8;
-      box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+      border-color: #f97316;
+      box-shadow: 0 0 15px rgba(249, 115, 22, 0.45);
     }
     .search-input-box input {
       background: transparent;
@@ -301,7 +301,7 @@
     }
     .search-input-box input::placeholder { color: #64748b; }
     .search-btn {
-      background: #0284c7;
+      background: linear-gradient(135deg, #f97316, #ea580c);
       color: #fff;
       border: none;
       outline: none;
@@ -312,9 +312,9 @@
       font-size: 12px;
       letter-spacing: 1px;
       cursor: pointer;
-      transition: background 0.2s;
+      transition: all 0.2s;
     }
-    .search-btn:hover { background: #0369a1; }
+    .search-btn:hover { background: linear-gradient(135deg, #fb923c, #f97316); box-shadow: 0 0 12px rgba(249, 115, 22, 0.6); }
 
     .autocomplete-list {
       position: absolute;
@@ -385,8 +385,8 @@
       border-radius: 50%;
     }
     input:checked + .slider {
-      background-color: #0284c7;
-      box-shadow: 0 0 10px #0284c7;
+      background: linear-gradient(90deg, #f97316, #10b981);
+      box-shadow: 0 0 10px rgba(249, 115, 22, 0.6);
     }
     input:checked + .slider:before {
       transform: translateX(18px);
@@ -411,7 +411,7 @@
       text-transform: uppercase;
     }
     .telemetry-val {
-      color: #38bdf8;
+      color: #fb923c;
       font-weight: 700;
       font-size: 13px;
     }
@@ -550,8 +550,8 @@
 
     /* Live Weather Card inside Detail Panel */
     .weather-live-box {
-      background: linear-gradient(135deg, rgba(2, 132, 199, 0.25), rgba(15, 23, 42, 0.6));
-      border: 1px solid rgba(56, 189, 248, 0.35);
+      background: linear-gradient(135deg, rgba(249, 115, 22, 0.25), rgba(37, 99, 235, 0.35));
+      border: 1px solid rgba(249, 115, 22, 0.5);
       border-radius: 12px;
       padding: 12px;
       display: flex;
@@ -573,8 +573,8 @@
     }
     .wlb-status {
       font-size: 12px;
-      color: #38bdf8;
-      font-weight: 600;
+      color: #fb923c;
+      font-weight: 700;
     }
     .wlb-details {
       display: flex;
@@ -614,7 +614,7 @@
     }
 
     .flyto-btn {
-      background: linear-gradient(135deg, #0284c7, #0369a1);
+      background: linear-gradient(135deg, #f97316, #10b981);
       color: #fff;
       border: none;
       padding: 10px 14px;
@@ -628,12 +628,12 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
-      box-shadow: 0 0 15px rgba(2, 132, 199, 0.4);
+      box-shadow: 0 0 15px rgba(249, 115, 22, 0.45);
       transition: all 0.2s;
       width: 100%;
     }
     .flyto-btn:hover {
-      box-shadow: 0 0 25px rgba(56, 189, 248, 0.7);
+      box-shadow: 0 0 25px rgba(249, 115, 22, 0.75);
       transform: translateY(-1px);
     }
 
@@ -642,9 +642,9 @@
       position: absolute;
       pointer-events: none;
       z-index: 50;
-      background: rgba(11, 19, 38, 0.92);
-      border: 1px solid #38bdf8;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7), 0 0 15px rgba(56, 189, 248, 0.35);
+      background: rgba(12, 25, 56, 0.94);
+      border: 1.5px solid #f97316;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7), 0 0 15px rgba(249, 115, 22, 0.4);
       border-radius: 8px;
       padding: 8px 14px;
       backdrop-filter: blur(12px);
@@ -658,7 +658,7 @@
       font-family: var(--font-cyber);
       font-size: 14px;
       font-weight: 700;
-      color: #38bdf8;
+      color: #fb923c;
       display: flex;
       align-items: center;
       gap: 6px;
@@ -766,6 +766,9 @@
       <div class="brand-title">
         <span>TERRA-EARTH 3D // VỆ TINH TOÀN CẦU</span>
         <span class="brand-subtitle">Hiển Thị Tất Cả Quốc Gia & Mưa Nắng Thời Gian Thực</span>
+        <span style="font-family: var(--font-ui); font-size: 10px; color: #fbbf24; font-weight: 700; margin-top: 2px;">
+          Lê Lê Uyển Như • MSHS: FHG30019 • Trường TH, THCS, THPT FPT Hậu Giang
+        </span>
       </div>
     </div>
 
@@ -1186,16 +1189,16 @@
       .globeImageUrl(TEXTURES.day)
       .bumpImageUrl(TEXTURES.topology)
       .backgroundImageUrl(TEXTURES.space)
-      .atmosphereColor('#38bdf8')
-      .atmosphereAltitude(0.24)
-      // Country Polygons Configuration (Transparent glass fill to reveal photorealistic satellite Earth!)
+      .atmosphereColor('#3b82f6')
+      .atmosphereAltitude(0.25)
+      // Country Polygons Configuration (Orange & Blue Signature Theme)
       .polygonCapColor(feat => {
-        if (state.selectedCountry === feat) return 'rgba(245, 158, 11, 0.45)'; // Amber highlight
-        if (state.hoveredCountry === feat) return 'rgba(56, 189, 248, 0.35)'; // Cyan highlight
+        if (state.selectedCountry === feat) return 'rgba(249, 115, 22, 0.60)'; // Vibrant Orange selected highlight
+        if (state.hoveredCountry === feat) return 'rgba(37, 99, 235, 0.45)'; // Vibrant Blue hover highlight
         return 'rgba(255, 255, 255, 0.01)'; // Transparent: shows authentic Blue Marble satellite earth!
       })
-      .polygonSideColor(() => 'rgba(56, 189, 248, 0.15)')
-      .polygonStrokeColor(() => 'rgba(56, 189, 248, 0.65)') // Crisp illuminated national boundaries
+      .polygonSideColor(() => 'rgba(249, 115, 22, 0.28)')
+      .polygonStrokeColor(() => 'rgba(249, 115, 22, 0.65)') // Crisp illuminated Orange national boundaries
       .polygonAltitude(feat => {
         if (state.selectedCountry === feat) return 0.05;
         if (state.hoveredCountry === feat) return 0.03;

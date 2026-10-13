@@ -253,21 +253,21 @@ export const MekongKnowledgeQA: React.FC<{
   return (
     <div className="space-y-6 max-w-5xl mx-auto">
       {/* Header Banner */}
-      <div className="bg-gradient-to-r from-indigo-950 via-slate-900 to-sky-950 text-white rounded-3xl p-6 sm:p-8 shadow-xl relative overflow-hidden border border-indigo-800/60">
+      <div className="bg-gradient-to-r from-emerald-950 via-emerald-900 to-orange-950 text-white rounded-3xl p-6 sm:p-8 shadow-xl relative overflow-hidden border border-orange-500/40">
         <div className="relative z-10 flex flex-wrap items-center justify-between gap-4">
           <div>
             <div className="flex items-center gap-2 mb-2">
-              <span className="px-3 py-1 rounded-full text-xs font-black bg-cyan-400 text-slate-950 flex items-center gap-1.5 shadow-xs">
-                <Lightbulb className="w-3.5 h-3.5 text-slate-950" />
+              <span className="px-3 py-1 rounded-full text-xs font-black bg-orange-500 text-white flex items-center gap-1.5 shadow-xs">
+                <Lightbulb className="w-3.5 h-3.5 text-white" />
                 Hỏi Đáp Chuyên Sâu & AI Voice
               </span>
-              <span className="text-xs text-sky-200 hidden sm:inline">Chuẩn kiến thức SGK Địa lí 11</span>
+              <span className="text-xs text-emerald-200 hidden sm:inline">Chuẩn kiến thức sông Mê Công</span>
             </div>
             <h1 className="text-2xl sm:text-4xl font-black tracking-tight text-white flex items-center gap-2.5">
               <span>AI Hỏi Đáp Kiến Thức Sông Mê Công</span>
-              <span className="text-xl sm:text-2xl text-cyan-300">🧠</span>
+              <span className="text-xl sm:text-2xl text-orange-400">🧠</span>
             </h1>
-            <p className="text-sky-100 text-xs sm:text-sm max-w-2xl mt-2 leading-relaxed">
+            <p className="text-emerald-100 text-xs sm:text-sm max-w-2xl mt-2 leading-relaxed">
               Trợ lý chuyên gia giải đáp mọi thắc mắc về thủy văn, phù sa, đập thủy điện, hạn mặn và liên hệ ĐBSCL – Hậu Giang. 
               Hỗ trợ tương tác bằng giọng nói tiếng Việt tự nhiên và gợi ý câu hỏi tiếp theo!
             </p>

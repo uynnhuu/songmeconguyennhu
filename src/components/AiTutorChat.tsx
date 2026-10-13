@@ -125,7 +125,7 @@ export const AiTutorChat: React.FC<AiTutorChatProps> = ({
     {
       id: 'welcome-1',
       sender: 'bot',
-      text: `Xin chào bạn! Mình là **Kiến Sáng** 🐜 – Trợ lý AI học tập tiếng Việt của **Trường TH, THCS, THPT FPT Hậu Giang** (61C ấp 6, xã Vị Thủy, TP.Cần Thơ).
+      text: `Xin chào bạn! Mình là **Kiến Sáng** 🐜 – Trợ lý AI học tập tiếng Việt của **Trường TH, THCS, THPT FPT Hậu Giang** (61C ấp 6, xã Vị Thủy, TP.Cần Thơ), đồng hành cùng học sinh **Lê Lê Uyển Như** (MSHS: **FHG30019**).
 
 Mình được thiết kế để trò chuyện tự nhiên, đọc chuẩn xác văn bản và hỗ trợ bạn luyện phát âm tiếng Việt:
 • 💬 **Hội thoại Tự nhiên**: Hỏi đáp kiến thức Địa lí 11 Sông Mê Công & ĐBSCL, trò chuyện thân mật như người Việt Nam.
@@ -726,7 +726,7 @@ Bạn muốn trò chuyện, yêu cầu mình đọc một đoạn văn hay cùng
       return {
         reply: `Dạ chào bạn! Mình rất khỏe và vui khi được trò chuyện cùng bạn hôm nay. 
 
-Mình là **Kiến Sáng** – trợ lý AI của **Trường TH, THCS, THPT FPT Hậu Giang**. Mình có thể:
+Mình là **Kiến Sáng** – trợ lý AI của **Trường TH, THCS, THPT FPT Hậu Giang**, đồng hành cùng bạn **Lê Lê Uyển Như** (MSHS: **FHG30019**). Mình có thể:
 1. 📖 **Đọc chính xác 100% văn bản**: Bạn chỉ cần gõ *"Đọc: [đoạn văn]"* hoặc sang tab "Đọc Văn Bản", mình sẽ đọc chuẩn xác toàn bộ bằng tiếng Việt rõ ràng, giữ trọn dấu câu.
 2. 🗣️ **Cùng bạn luyện nói**: Luyện phát âm các âm dễ nhầm (*s/x, ch/tr, d/gi/r, l/n, n/ng, t/c, p/b*) và 6 thanh điệu tiếng Việt.
 3. 🌊 **Giải đáp Chuyên đề Địa lí 11**: Sông Mê Kông 4.763 km, hệ thống 9 cửa sông Cửu Long, 5 thủ tục kỹ thuật của MRC.
@@ -967,14 +967,14 @@ Nhiệm vụ: Trò chuyện tự nhiên, đọc văn bản và phát âm tiếng
       )}
 
       {/* Top Mode Navigation Tabs: Chat, Exact Reading Studio, Speaking Coach */}
-      <div className="bg-white rounded-2xl border border-slate-200 p-2 shadow-xs flex flex-wrap items-center justify-between gap-2">
+      <div className="bg-white rounded-2xl border border-orange-200 p-2 shadow-xs flex flex-wrap items-center justify-between gap-2">
         <div className="flex items-center gap-1.5 flex-wrap">
           <button
             onClick={() => setActiveMode('chat')}
             className={`px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-2 transition-all cursor-pointer ${
               activeMode === 'chat'
-                ? 'bg-gradient-to-r from-orange-600 to-amber-600 text-white shadow-sm'
-                : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
+                ? 'bg-gradient-to-r from-orange-500 to-emerald-600 text-white shadow-sm'
+                : 'text-emerald-950 hover:bg-orange-50 hover:text-orange-600'
             }`}
           >
             <MessageSquare className="w-4 h-4" />
@@ -985,8 +985,8 @@ Nhiệm vụ: Trò chuyện tự nhiên, đọc văn bản và phát âm tiếng
             onClick={() => setActiveMode('reading_studio')}
             className={`px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-2 transition-all cursor-pointer ${
               activeMode === 'reading_studio'
-                ? 'bg-gradient-to-r from-teal-600 to-emerald-600 text-white shadow-sm'
-                : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
+                ? 'bg-gradient-to-r from-orange-500 to-emerald-600 text-white shadow-sm'
+                : 'text-emerald-950 hover:bg-orange-50 hover:text-orange-600'
             }`}
           >
             <BookOpen className="w-4 h-4" />
@@ -997,8 +997,8 @@ Nhiệm vụ: Trò chuyện tự nhiên, đọc văn bản và phát âm tiếng
             onClick={() => setActiveMode('speaking_coach')}
             className={`px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-2 transition-all cursor-pointer ${
               activeMode === 'speaking_coach'
-                ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-sm'
-                : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
+                ? 'bg-gradient-to-r from-orange-500 to-emerald-600 text-white shadow-sm'
+                : 'text-emerald-950 hover:bg-orange-50 hover:text-orange-600'
             }`}
           >
             <GraduationCap className="w-4 h-4" />
@@ -1009,7 +1009,7 @@ Nhiệm vụ: Trò chuyện tự nhiên, đọc văn bản và phát âm tiếng
         <div className="flex items-center gap-2">
           <button
             onClick={() => setShowConfigModal(true)}
-            className="px-3 py-1.5 rounded-xl border border-slate-200 text-slate-700 hover:bg-slate-50 text-xs font-bold flex items-center gap-1.5 transition-colors cursor-pointer"
+            className="px-3 py-1.5 rounded-xl border border-orange-200 text-emerald-950 hover:bg-orange-50 text-xs font-bold flex items-center gap-1.5 transition-colors cursor-pointer"
           >
             <Settings className="w-3.5 h-3.5 text-orange-600" />
             <span>Cấu hình Giọng Đọc</span>
@@ -1021,9 +1021,9 @@ Nhiệm vụ: Trò chuyện tự nhiên, đọc văn bản và phát âm tiếng
       {/* MODE 1: CHATBOT GIAO TIẾP TỰ NHIÊN                                        */}
       {/* ========================================================================= */}
       {activeMode === 'chat' && (
-        <div className="bg-white rounded-2xl border border-slate-200 shadow-lg overflow-hidden flex flex-col h-[650px] sm:h-[720px]">
+        <div className="bg-white rounded-2xl border border-orange-200 shadow-lg overflow-hidden flex flex-col h-[650px] sm:h-[720px]">
           {/* Header with Mascot & Status */}
-          <div className="bg-gradient-to-r from-orange-600 via-orange-500 to-amber-500 p-4 text-white flex items-center justify-between shrink-0 shadow-md">
+          <div className="bg-gradient-to-r from-emerald-950 via-emerald-800 to-orange-600 p-4 text-white flex items-center justify-between shrink-0 shadow-md">
             <div className="flex items-center gap-3">
               {/* Mascot Avatar with Active Ring */}
               <div className="relative">
@@ -1059,8 +1059,12 @@ Nhiệm vụ: Trò chuyện tự nhiên, đọc văn bản và phát âm tiếng
                     </span>
                   </h2>
                 </div>
-                <p className="text-orange-100 text-xs">
-                  Trường TH, THCS, THPT FPT Hậu Giang (61C ấp 6, xã Vị Thủy)
+                <p className="text-orange-100 text-xs flex items-center gap-1.5 flex-wrap">
+                  <span>Trường TH, THCS, THPT FPT Hậu Giang</span>
+                  <span className="text-orange-300">•</span>
+                  <span className="bg-orange-600/40 px-1.5 py-0.2 rounded text-[11px] font-bold text-white border border-orange-400/40">
+                    Học sinh: Lê Lê Uyển Như (FHG30019)
+                  </span>
                 </p>
               </div>
             </div>

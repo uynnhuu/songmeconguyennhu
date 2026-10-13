@@ -153,29 +153,29 @@ export const MekongKnowledgeHub: React.FC<MekongKnowledgeHubProps> = ({
   return (
     <div className="space-y-8 animate-in fade-in duration-300">
       {/* Textbook Authority Header Banner */}
-      <div className="bg-gradient-to-br from-sky-950 via-slate-900 to-indigo-950 text-white rounded-3xl p-6 sm:p-9 shadow-xl border border-sky-700/30 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="bg-gradient-to-br from-emerald-950 via-emerald-900 to-orange-950 text-white rounded-3xl p-6 sm:p-9 shadow-xl border border-orange-500/40 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-orange-500/15 rounded-full blur-3xl pointer-events-none" />
         
         <div className="relative z-10 space-y-4">
           <div className="flex flex-wrap items-center gap-2">
-            <span className="px-3 py-1 rounded-full text-xs font-black bg-amber-400 text-slate-950 flex items-center gap-1.5 shadow-md">
+            <span className="px-3 py-1 rounded-full text-xs font-black bg-orange-500 text-white flex items-center gap-1.5 shadow-md">
               <BookOpen className="w-3.5 h-3.5" />
               CHUYÊN ĐỀ HỌC TẬP ĐỊA LÍ 11
             </span>
-            <span className="px-3 py-1 rounded-full text-xs font-bold bg-sky-900/80 text-sky-200 border border-sky-700/50">
+            <span className="px-3 py-1 rounded-full text-xs font-bold bg-emerald-900/90 text-emerald-100 border border-emerald-600/50">
               Bộ Sách: Kết Nối Tri Thức Với Cuộc Sống (NXB Giáo Dục Việt Nam)
             </span>
-            <span className="text-xs text-slate-300 flex items-center gap-1">
-              <School className="w-3.5 h-3.5 text-amber-400" />
+            <span className="text-xs text-emerald-100 flex items-center gap-1">
+              <School className="w-3.5 h-3.5 text-orange-400" />
               TH, THCS, THPT FPT Hậu Giang (61C Vị Thủy)
             </span>
           </div>
 
           <div className="space-y-2 max-w-4xl">
             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight">
-              Cẩm Nang Tri Thức Sông Mê Công & Uỷ Hội MRC
+              Cẩm Nang Kiến Thức Sông Mê Công & Uỷ Hội MRC
             </h1>
-            <p className="text-xs sm:text-sm text-sky-100/90 leading-relaxed">
+            <p className="text-xs sm:text-sm text-emerald-100 leading-relaxed">
               Toàn bộ dữ liệu số học, tỉ lệ lưu vực, cơ chế pháp lí 5 thủ tục kỹ thuật và vai trò chiến lược của Việt Nam 
               được đối chiếu chuẩn xác 100% theo nội dung <strong>Chuyên đề 11.1 (Trang 5 – 19)</strong> SGK Địa lí 11.
             </p>
@@ -184,16 +184,16 @@ export const MekongKnowledgeHub: React.FC<MekongKnowledgeHubProps> = ({
           <div className="flex flex-wrap items-center gap-3 pt-2">
             <button
               onClick={() => window.print()}
-              className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs font-bold transition-all border border-white/20 shadow-xs cursor-pointer"
+              className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/15 hover:bg-white/25 text-white text-xs font-bold transition-all border border-white/25 shadow-xs cursor-pointer"
             >
-              <Printer className="w-4 h-4 text-sky-300" />
+              <Printer className="w-4 h-4 text-orange-300" />
               <span>In Bản Tóm Tắt Ôn Tập</span>
             </button>
 
             {onOpenAssistantHelp && (
               <button
                 onClick={() => onOpenAssistantHelp('Giải đáp thắc mắc về số liệu SGK Địa lí 11 sông Mê Kông')}
-                className="flex items-center gap-2 px-4 py-2 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 text-xs font-black transition-all shadow-md cursor-pointer hover:scale-105"
+                className="flex items-center gap-2 px-4 py-2 rounded-xl bg-orange-500 hover:bg-orange-400 text-white text-xs font-black transition-all shadow-md cursor-pointer hover:scale-105"
               >
                 <Sparkles className="w-4 h-4" />
                 <span>Hỏi Chatbot Kiến Sáng Về Số Liệu</span>
@@ -204,7 +204,7 @@ export const MekongKnowledgeHub: React.FC<MekongKnowledgeHubProps> = ({
               <>
                 <button
                   onClick={() => onNavigateTab('globe')}
-                  className="flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-sky-500 to-teal-500 hover:from-sky-400 hover:to-teal-400 text-slate-950 text-xs font-black transition-all shadow-md cursor-pointer hover:scale-105"
+                  className="flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-orange-500 to-emerald-600 hover:from-orange-400 hover:to-emerald-500 text-white text-xs font-black transition-all shadow-md cursor-pointer hover:scale-105"
                 >
                   <Globe className="w-4 h-4 animate-spin" style={{ animationDuration: '16s' }} />
                   <span>Quả Địa Cầu 3D (6 Nước)</span>
@@ -220,21 +220,21 @@ export const MekongKnowledgeHub: React.FC<MekongKnowledgeHubProps> = ({
         {MEKONG_KEY_STATS.map((stat, idx) => (
           <div 
             key={idx}
-            className="bg-white rounded-2xl p-4 border border-slate-200/90 shadow-xs flex flex-col justify-between hover:shadow-md hover:border-sky-300 transition-all group"
+            className="bg-white rounded-2xl p-4 border border-orange-200/80 shadow-xs flex flex-col justify-between hover:shadow-md hover:border-orange-400 transition-all group"
           >
             <div>
               <span className="text-[11px] font-bold text-slate-500 block leading-tight mb-1">
                 {stat.label}
               </span>
-              <span className="text-base sm:text-lg font-black text-sky-950 block tracking-tight group-hover:text-sky-600 transition-colors">
+              <span className="text-base sm:text-lg font-black text-emerald-950 block tracking-tight group-hover:text-orange-600 transition-colors">
                 {stat.value}
               </span>
             </div>
-            <div className="pt-2 border-t border-slate-100 mt-2">
+            <div className="pt-2 border-t border-emerald-50 mt-2">
               <span className="text-[10px] text-slate-600 leading-tight block">
                 {stat.subtext}
               </span>
-              <span className="text-[9px] font-bold text-sky-700 block mt-1">
+              <span className="text-[9px] font-bold text-orange-600 block mt-1">
                 📖 {stat.source}
               </span>
             </div>
@@ -243,27 +243,27 @@ export const MekongKnowledgeHub: React.FC<MekongKnowledgeHubProps> = ({
       </div>
 
       {/* Interactive Basin Share Visualizer (Hình 2 - Trang 6 SGK) */}
-      <div className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-xs space-y-6">
-        <div className="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-slate-100">
+      <div className="bg-white rounded-3xl border border-orange-200/80 p-6 sm:p-8 shadow-xs space-y-6">
+        <div className="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-emerald-100">
           <div>
             <div className="flex items-center gap-2">
-              <span className="px-2.5 py-0.5 rounded-md bg-sky-100 text-sky-800 text-[11px] font-black uppercase">
+              <span className="px-2.5 py-0.5 rounded-md bg-orange-100 text-orange-800 text-[11px] font-black uppercase border border-orange-300">
                 Hình 2 • Trang 6 SGK
               </span>
               <span className="text-xs text-slate-500">Nguồn: Uỷ hội sông Mê Công, 2022</span>
             </div>
-            <h2 className="text-lg sm:text-xl font-black text-slate-900 mt-1">
+            <h2 className="text-lg sm:text-xl font-black text-emerald-950 mt-1">
               Biểu Đồ Tỉ Lệ Diện Tích Lưu Vực Sông Mê Công Theo Quốc Gia (%)
             </h2>
           </div>
           <span className="text-xs font-bold text-slate-600">
-            Tổng diện tích lưu vực: <strong className="text-sky-700">810.000 km²</strong>
+            Tổng diện tích lưu vực: <strong className="text-orange-600">810.000 km²</strong>
           </span>
         </div>
 
         {/* Progress Bar Visualization of percentages */}
         <div className="space-y-2">
-          <div className="h-6 rounded-full overflow-hidden flex shadow-inner bg-slate-100 p-0.5">
+          <div className="h-6 rounded-full overflow-hidden flex shadow-inner bg-blue-50 p-0.5 border border-blue-200">
             {BASIN_SHARE_DATA.map((c) => (
               <button
                 key={c.country}
@@ -271,12 +271,12 @@ export const MekongKnowledgeHub: React.FC<MekongKnowledgeHubProps> = ({
                 onClick={() => setSelectedCountry(c.country)}
                 title={`${c.country}: ${c.percentage}% (${c.areaKm2.toLocaleString('vi-VN')} km²)`}
                 className={`h-full transition-transform hover:scale-y-110 cursor-pointer first:rounded-l-full last:rounded-r-full flex items-center justify-center text-[11px] font-black ${
-                  c.country === 'Lào' ? 'bg-amber-400 text-slate-950' :
-                  c.country === 'Thái Lan' ? 'bg-sky-500 text-white' :
-                  c.country === 'Trung Quốc' ? 'bg-rose-500 text-white' :
-                  c.country === 'Cam-pu-chia' ? 'bg-indigo-500 text-white' :
-                  c.country === 'Việt Nam' ? 'bg-emerald-600 text-white' :
-                  'bg-purple-500 text-white'
+                  c.country === 'Lào' ? 'bg-orange-500 text-white' :
+                  c.country === 'Thái Lan' ? 'bg-blue-600 text-white' :
+                  c.country === 'Trung Quốc' ? 'bg-orange-600 text-white' :
+                  c.country === 'Cam-pu-chia' ? 'bg-blue-700 text-white' :
+                  c.country === 'Việt Nam' ? 'bg-amber-500 text-slate-950' :
+                  'bg-blue-500 text-white'
                 }`}
               >
                 {c.percentage >= 8 ? `${c.country} ${c.percentage}%` : `${c.percentage}%`}
@@ -299,14 +299,14 @@ export const MekongKnowledgeHub: React.FC<MekongKnowledgeHubProps> = ({
                 onClick={() => setSelectedCountry(c.country)}
                 className={`p-3 rounded-2xl border text-left transition-all cursor-pointer ${
                   isSelected
-                    ? 'bg-slate-900 text-white border-slate-900 shadow-md scale-[1.03]'
-                    : 'bg-slate-50 hover:bg-slate-100 text-slate-800 border-slate-200'
+                    ? 'bg-gradient-to-br from-orange-500 to-emerald-600 text-white border-orange-400 shadow-md scale-[1.03]'
+                    : 'bg-emerald-50/50 hover:bg-orange-50/70 text-emerald-950 border-emerald-200'
                 }`}
               >
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-black">{c.country}</span>
                   <span className={`text-xs font-black px-1.5 py-0.5 rounded-md ${
-                    isSelected ? 'bg-white/20 text-white' : 'bg-slate-200 text-slate-800'
+                    isSelected ? 'bg-white/25 text-white' : 'bg-orange-100 text-orange-800'
                   }`}>
                     {c.percentage}%
                   </span>
@@ -321,29 +321,29 @@ export const MekongKnowledgeHub: React.FC<MekongKnowledgeHubProps> = ({
 
         {/* Selected Country Dossier Card */}
         {activeCountryData && (
-          <div className="p-5 rounded-2xl bg-sky-50/80 border border-sky-200/90 text-slate-800 space-y-3 animate-in fade-in">
+          <div className="p-5 rounded-2xl bg-gradient-to-r from-orange-50/80 to-blue-50/80 border border-orange-200/90 text-slate-800 space-y-3 animate-in fade-in">
             <div className="flex flex-wrap items-center justify-between gap-2">
               <div className="flex items-center gap-2">
-                <span className="w-3 h-3 rounded-full bg-sky-600" />
-                <h3 className="text-sm sm:text-base font-black text-sky-950">
+                <span className="w-3 h-3 rounded-full bg-orange-500" />
+                <h3 className="text-sm sm:text-base font-black text-blue-950">
                   {activeCountryData.vietnameseName} ({activeCountryData.country})
                 </h3>
               </div>
-              <span className="text-xs font-bold px-2.5 py-1 rounded-lg bg-white border border-sky-300 text-sky-900">
+              <span className="text-xs font-bold px-2.5 py-1 rounded-lg bg-white border border-orange-300 text-orange-800">
                 Diện tích trong lưu vực: {activeCountryData.areaKm2.toLocaleString('vi-VN')} km² ({activeCountryData.percentage}%)
               </span>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
-              <div className="bg-white p-3 rounded-xl border border-sky-100 space-y-1">
-                <span className="font-bold text-sky-900 block">Tên Gọi Văn Hóa Bản Địa:</span>
+              <div className="bg-white p-3 rounded-xl border border-orange-200/70 space-y-1">
+                <span className="font-bold text-orange-700 block">Tên Gọi Văn Hóa Bản Địa:</span>
                 <p className="text-slate-700">
                   Được người dân địa phương gọi là <strong>"{activeCountryData.localName}"</strong> (nghĩa là <em>"{activeCountryData.localMeaning}"</em>).
                 </p>
               </div>
 
-              <div className="bg-white p-3 rounded-xl border border-sky-100 space-y-1">
-                <span className="font-bold text-sky-900 block">Đặc Điểm Địa Lí & Lưu Vực:</span>
+              <div className="bg-white p-3 rounded-xl border border-blue-200/70 space-y-1">
+                <span className="font-bold text-blue-800 block">Đặc Điểm Địa Lí & Lưu Vực:</span>
                 <p className="text-slate-700">
                   {activeCountryData.role}
                 </p>
@@ -375,11 +375,11 @@ export const MekongKnowledgeHub: React.FC<MekongKnowledgeHubProps> = ({
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
           {MRC_FIVE_PROCEDURES.map((proc, idx) => {
             const colors = [
-              { border: 'border-emerald-300', bg: 'bg-emerald-50/70', badge: 'bg-emerald-600 text-white', text: 'text-emerald-950' },
+              { border: 'border-orange-300', bg: 'bg-orange-50/70', badge: 'bg-orange-600 text-white', text: 'text-orange-950' },
+              { border: 'border-blue-300', bg: 'bg-blue-50/70', badge: 'bg-blue-600 text-white', text: 'text-blue-950' },
               { border: 'border-amber-300', bg: 'bg-amber-50/70', badge: 'bg-amber-600 text-white', text: 'text-amber-950' },
               { border: 'border-sky-300', bg: 'bg-sky-50/70', badge: 'bg-sky-600 text-white', text: 'text-sky-950' },
-              { border: 'border-indigo-300', bg: 'bg-indigo-50/70', badge: 'bg-indigo-600 text-white', text: 'text-indigo-950' },
-              { border: 'border-cyan-300', bg: 'bg-cyan-50/70', badge: 'bg-cyan-600 text-white', text: 'text-cyan-950' },
+              { border: 'border-orange-300', bg: 'bg-orange-50/70', badge: 'bg-gradient-to-r from-orange-500 to-emerald-600 text-white', text: 'text-emerald-950' },
             ][idx % 5];
 
             return (
@@ -455,8 +455,8 @@ export const MekongKnowledgeHub: React.FC<MekongKnowledgeHubProps> = ({
                 }}
                 className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
                   activeCategory === cat.id
-                    ? 'bg-sky-600 text-white shadow-xs'
-                    : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                    ? 'bg-gradient-to-r from-orange-500 to-emerald-600 text-white shadow-xs'
+                    : 'bg-emerald-50/80 text-emerald-900 hover:bg-orange-100/80'
                 }`}
               >
                 {cat.label}
@@ -470,17 +470,17 @@ export const MekongKnowledgeHub: React.FC<MekongKnowledgeHubProps> = ({
       {activeCategory === 'standards' && (
         <div className="space-y-6 animate-in fade-in duration-300">
           {/* Top Quick Navigation Bar across the 5 Standards */}
-          <div className="bg-gradient-to-r from-sky-900 via-indigo-950 to-slate-900 text-white rounded-3xl p-5 sm:p-6 shadow-md border border-sky-700/40">
+          <div className="bg-gradient-to-r from-emerald-950 via-emerald-900 to-orange-950 text-white rounded-3xl p-5 sm:p-6 shadow-md border border-orange-500/40">
             <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
               <div>
-                <span className="px-2.5 py-0.5 rounded-full text-[11px] font-black bg-amber-400 text-slate-950 uppercase inline-flex items-center gap-1">
+                <span className="px-2.5 py-0.5 rounded-full text-[11px] font-black bg-orange-500 text-white uppercase inline-flex items-center gap-1">
                   <Target className="w-3.5 h-3.5" />
                   Chuẩn Năng Lực Chương Trình GDPT 2018
                 </span>
                 <h2 className="text-lg sm:text-xl font-black text-white mt-1">
                   5 Yêu Cầu Cần Đạt Trọng Tâm - Chuyên Đề 11.1 Sông Mê Công
                 </h2>
-                <p className="text-xs text-sky-200 max-w-3xl mt-0.5">
+                <p className="text-xs text-blue-100 max-w-3xl mt-0.5">
                   Đối chiếu toàn diện kiến thức địa lí tự nhiên, kinh tế - xã hội, thể chế pháp lí MRC và thực tiễn Đồng bằng sông Cửu Long / Tỉnh Hậu Giang.
                 </p>
               </div>
@@ -521,13 +521,13 @@ export const MekongKnowledgeHub: React.FC<MekongKnowledgeHubProps> = ({
                     }}
                     className={`p-2.5 rounded-2xl text-left transition-all cursor-pointer flex flex-col justify-between gap-1 border ${
                       isSelected 
-                        ? 'bg-amber-400 text-slate-950 font-black border-amber-300 shadow-md scale-[1.02]' 
-                        : 'bg-white/10 hover:bg-white/20 text-white border-white/10 text-xs'
+                        ? 'bg-orange-500 text-white font-black border-orange-300 shadow-md scale-[1.02]' 
+                        : 'bg-white/10 hover:bg-white/20 text-white border-white/15 text-xs'
                     }`}
                   >
                     <div className="flex items-center justify-between">
                       <span className={`text-[10px] font-black uppercase px-2 py-0.5 rounded-md ${
-                        isSelected ? 'bg-slate-950 text-amber-300' : 'bg-white/20 text-sky-200'
+                        isSelected ? 'bg-blue-950 text-orange-300' : 'bg-white/20 text-blue-100'
                       }`}>
                         Mục tiêu {idx + 1}
                       </span>
@@ -551,19 +551,19 @@ export const MekongKnowledgeHub: React.FC<MekongKnowledgeHubProps> = ({
               const isSelected = selectedStandardId === std.id;
 
               const themeGradients = [
-                'from-sky-950 via-slate-900 to-indigo-950 border-sky-700/50',
-                'from-emerald-950 via-slate-900 to-teal-950 border-emerald-700/50',
-                'from-rose-950 via-slate-900 to-amber-950 border-amber-700/50',
-                'from-indigo-950 via-slate-900 to-blue-950 border-indigo-700/50',
-                'from-teal-950 via-slate-900 to-emerald-950 border-teal-700/50'
+                'from-blue-950 via-blue-900 to-orange-900 border-orange-500/50',
+                'from-orange-900 via-blue-950 to-blue-900 border-blue-500/50',
+                'from-blue-950 via-slate-900 to-orange-950 border-orange-500/50',
+                'from-blue-900 via-blue-950 to-orange-900 border-blue-500/50',
+                'from-orange-950 via-blue-950 to-blue-900 border-orange-500/50'
               ][idx % 5];
 
               const badgeColors = [
-                'bg-sky-400 text-slate-950',
-                'bg-emerald-400 text-slate-950',
+                'bg-orange-500 text-white',
+                'bg-blue-500 text-white',
                 'bg-amber-400 text-slate-950',
-                'bg-indigo-300 text-slate-950',
-                'bg-teal-400 text-slate-950'
+                'bg-orange-500 text-white',
+                'bg-blue-500 text-white'
               ][idx % 5];
 
               return (
@@ -683,13 +683,13 @@ export const MekongKnowledgeHub: React.FC<MekongKnowledgeHubProps> = ({
                       </div>
 
                       {/* Official Exam Question & Standard Model Answer */}
-                      <div className="rounded-2xl border border-emerald-200 bg-emerald-50/50 p-5 space-y-3">
+                      <div className="rounded-2xl border border-blue-200 bg-blue-50/50 p-5 space-y-3">
                         <div className="flex items-center justify-between gap-2">
-                          <span className="text-xs font-black text-emerald-900 uppercase tracking-wider flex items-center gap-1.5">
-                            <HelpCircle className="w-4 h-4 text-emerald-700" />
+                          <span className="text-xs font-black text-blue-950 uppercase tracking-wider flex items-center gap-1.5">
+                            <HelpCircle className="w-4 h-4 text-orange-600" />
                             <span>Câu Hỏi Ôn Tập Kiểm Tra & Đáp Án Mẫu Đạt Điểm Tuyệt Đối:</span>
                           </span>
-                          <span className="text-[11px] font-bold text-emerald-700 bg-emerald-100 px-2.5 py-0.5 rounded-full">
+                          <span className="text-[11px] font-bold text-orange-800 bg-orange-100 border border-orange-300 px-2.5 py-0.5 rounded-full">
                             Chuẩn Barem Địa Lí 11
                           </span>
                         </div>
@@ -698,8 +698,8 @@ export const MekongKnowledgeHub: React.FC<MekongKnowledgeHubProps> = ({
                           ❓ {std.reviewQuestion}
                         </p>
 
-                        <div className="bg-white p-3.5 rounded-xl border border-emerald-200 text-xs sm:text-sm text-slate-700 leading-relaxed">
-                          <strong className="text-emerald-800 block mb-1">Gợi ý trả lời chuẩn xác 100%:</strong>
+                        <div className="bg-white p-3.5 rounded-xl border border-blue-200 text-xs sm:text-sm text-slate-700 leading-relaxed">
+                          <strong className="text-blue-800 block mb-1">Gợi ý trả lời chuẩn xác 100%:</strong>
                           {std.modelAnswer}
                         </div>
                       </div>
@@ -949,14 +949,14 @@ export const MekongKnowledgeHub: React.FC<MekongKnowledgeHubProps> = ({
       )}
 
       {/* School Pedagogical Footer Connection */}
-      <div className="p-5 rounded-3xl bg-slate-900 text-slate-300 border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+      <div className="p-5 rounded-3xl bg-gradient-to-r from-emerald-950 via-emerald-900 to-orange-950 text-emerald-100 border border-orange-500/40 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
         <div className="flex items-center gap-3 text-center sm:text-left">
-          <div className="w-10 h-10 rounded-2xl bg-amber-400 text-slate-950 flex items-center justify-center font-black shrink-0">
+          <div className="w-10 h-10 rounded-2xl bg-orange-500 text-white flex items-center justify-center font-black shrink-0 shadow-md">
             <School className="w-5 h-5" />
           </div>
           <div>
             <p className="font-bold text-white">Trường TH, THCS, THPT FPT Hậu Giang</p>
-            <p className="text-[11px] text-slate-400">
+            <p className="text-[11px] text-emerald-200">
               📍 61C ấp 6, xã Vị Thủy, TP.Cần Thơ • Giáo Dục Địa Lí 11 Gắn Liền Với Thực Tiễn Sông Nước Miền Tây
             </p>
           </div>
@@ -966,7 +966,7 @@ export const MekongKnowledgeHub: React.FC<MekongKnowledgeHubProps> = ({
           {onNavigateTab && (
             <button
               onClick={() => onNavigateTab('vietnam')}
-              className="px-3.5 py-1.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs transition-colors cursor-pointer"
+              className="px-4 py-2 rounded-xl bg-gradient-to-r from-orange-500 to-emerald-600 hover:from-orange-400 hover:to-emerald-500 text-white font-bold text-xs transition-all shadow-md cursor-pointer"
             >
               Xem Liên Hệ Việt Nam
             </button>

@@ -28,16 +28,16 @@ export const PromptLessonGuide: React.FC = () => {
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div className="bg-gradient-to-r from-violet-900 via-indigo-900 to-sky-950 text-white rounded-2xl p-6 shadow-md">
+      <div className="bg-gradient-to-r from-emerald-950 via-emerald-900 to-orange-950 text-white rounded-2xl p-6 shadow-md border border-orange-500/40">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div>
-            <span className="px-2.5 py-1 rounded-full text-xs font-semibold bg-violet-500/30 text-violet-200 border border-violet-400/30">
+            <span className="px-2.5 py-1 rounded-full text-xs font-semibold bg-orange-500/25 text-orange-200 border border-orange-400/40">
               Công Cụ Sư Phạm Số • Google AI Studio
             </span>
             <h1 className="text-2xl sm:text-3xl font-black mt-2 tracking-tight">
               Bộ Prompt Chuẩn & Kế Hoạch Bài Dạy Địa Lí 11
             </h1>
-            <p className="text-indigo-200 text-xs sm:text-sm max-w-2xl mt-1 leading-relaxed">
+            <p className="text-emerald-100 text-xs sm:text-sm max-w-2xl mt-1 leading-relaxed">
               Dành cho giáo viên và học sinh: Copy ngay prompt tối ưu để tái lập hoặc mở rộng webapp trên Google AI Studio, 
               kèm kịch bản dạy học tương tác 45 phút chuẩn GDPT 2018.
             </p>
@@ -46,11 +46,11 @@ export const PromptLessonGuide: React.FC = () => {
           <div className="flex items-center gap-2">
             <button
               onClick={() => handleCopy(activePrompt.content, activePrompt.id)}
-              className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold text-xs shadow-md transition-transform hover:scale-105"
+              className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-orange-500 hover:bg-orange-400 text-white font-bold text-xs shadow-md transition-transform hover:scale-105 cursor-pointer"
             >
               {copiedId === activePrompt.id ? (
                 <>
-                  <Check className="w-4 h-4 text-emerald-800" />
+                  <Check className="w-4 h-4 text-white" />
                   <span>Đã Sao Chép Prompt!</span>
                 </>
               ) : (
@@ -64,15 +64,15 @@ export const PromptLessonGuide: React.FC = () => {
         </div>
 
         {/* Tab switcher */}
-        <div className="flex gap-2 mt-5 pt-4 border-t border-indigo-800/60 overflow-x-auto">
+        <div className="flex gap-2 mt-5 pt-4 border-t border-emerald-800/60 overflow-x-auto">
           {MASTER_PROMPTS.map((p, idx) => (
             <button
               key={p.id}
               onClick={() => setSelectedPromptTab(idx)}
-              className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition-colors ${
+              className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition-colors cursor-pointer ${
                 selectedPromptTab === idx
-                  ? 'bg-white text-indigo-950 shadow-xs'
-                  : 'text-indigo-200 hover:bg-white/10'
+                  ? 'bg-orange-500 text-white shadow-xs font-bold'
+                  : 'text-emerald-100 hover:bg-white/10'
               }`}
             >
               {p.title}

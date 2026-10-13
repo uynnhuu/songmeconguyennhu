@@ -118,25 +118,25 @@ export const WaterDropJourney: React.FC<WaterDropJourneyProps> = ({
   return (
     <div className="space-y-6 max-w-5xl mx-auto">
       {/* Header Banner */}
-      <div className="bg-gradient-to-r from-sky-900 via-teal-900 to-indigo-950 text-white rounded-3xl p-6 sm:p-8 shadow-xl relative overflow-hidden border border-sky-800/60">
+      <div className="bg-gradient-to-r from-blue-950 via-blue-900 to-orange-900 text-white rounded-3xl p-6 sm:p-8 shadow-xl relative overflow-hidden border border-orange-500/40">
         {/* Animated Background Water Ripple Simulation */}
-        <div className="absolute -right-16 -top-16 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl pointer-events-none animate-pulse" />
-        <div className="absolute right-1/3 -bottom-20 w-80 h-80 bg-teal-500/15 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -right-16 -top-16 w-72 h-72 bg-orange-500/20 rounded-full blur-3xl pointer-events-none animate-pulse" />
+        <div className="absolute right-1/3 -bottom-20 w-80 h-80 bg-blue-500/15 rounded-full blur-3xl pointer-events-none" />
 
         <div className="relative z-10 flex flex-wrap items-center justify-between gap-4">
           <div>
             <div className="flex items-center gap-2 mb-2">
-              <span className="px-3 py-1 rounded-full text-xs font-black bg-cyan-400 text-slate-950 flex items-center gap-1.5 shadow-xs">
-                <Droplets className="w-3.5 h-3.5 text-blue-950 fill-blue-950" />
+              <span className="px-3 py-1 rounded-full text-xs font-black bg-orange-500 text-white flex items-center gap-1.5 shadow-xs">
+                <Droplets className="w-3.5 h-3.5 text-white fill-white" />
                 Trải Nghiệm Tương Tác Số 1
               </span>
-              <span className="text-xs text-sky-200 hidden sm:inline">Hành trình dòng nước 4.763 km</span>
+              <span className="text-xs text-blue-100 hidden sm:inline">Hành trình dòng nước 4.763 km</span>
             </div>
             <h1 className="text-2xl sm:text-4xl font-black tracking-tight text-white flex items-center gap-2.5">
               <span>Một Giọt Nước Mê Công</span>
-              <span className="text-xl sm:text-2xl text-cyan-300">💧</span>
+              <span className="text-xl sm:text-2xl text-orange-300">💧</span>
             </h1>
-            <p className="text-sky-100 text-xs sm:text-sm max-w-2xl mt-2 leading-relaxed">
+            <p className="text-blue-100 text-xs sm:text-sm max-w-2xl mt-2 leading-relaxed">
               Bạn chính là một giọt nước trên sông Mê Kông! Hãy bắt đầu hành trình từ những dải sông băng Tây Tạng ở độ cao 5.000m, 
               vượt qua 6 quốc gia và hòa vào Biển Đông qua 9 cửa rồng Cửu Long.
             </p>
@@ -148,11 +148,11 @@ export const WaterDropJourney: React.FC<WaterDropJourneyProps> = ({
               className="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white transition-colors cursor-pointer border border-white/20"
               title={soundEnabled ? 'Tắt âm thanh sông nước' : 'Bật âm thanh sông nước'}
             >
-              {soundEnabled ? <Volume2 className="w-5 h-5 text-cyan-300" /> : <VolumeX className="w-5 h-5 text-slate-400" />}
+              {soundEnabled ? <Volume2 className="w-5 h-5 text-orange-300" /> : <VolumeX className="w-5 h-5 text-slate-400" />}
             </button>
-            <div className="bg-white/10 backdrop-blur-md px-4 py-2.5 rounded-2xl border border-white/20 text-right">
-              <span className="text-[10px] text-sky-300 block uppercase font-bold tracking-wider">Chặng Hiện Tại</span>
-              <span className="text-base sm:text-lg font-black text-cyan-200">
+            <div className="bg-white/15 backdrop-blur-md px-4 py-2.5 rounded-2xl border border-orange-400/40 text-right">
+              <span className="text-[10px] text-orange-300 block uppercase font-bold tracking-wider">Chặng Hiện Tại</span>
+              <span className="text-base sm:text-lg font-black text-white">
                 {isCompleted ? 'Hoàn Thành!' : `Chặng ${currentStageIndex + 1} / ${WATER_DROP_STAGES.length}`}
               </span>
             </div>
@@ -160,7 +160,7 @@ export const WaterDropJourney: React.FC<WaterDropJourneyProps> = ({
         </div>
 
         {/* 5-Stage Step Indicator */}
-        <div className="mt-8 pt-5 border-t border-sky-800/70">
+        <div className="mt-8 pt-5 border-t border-blue-800/70">
           <div className="grid grid-cols-5 gap-1.5 sm:gap-3">
             {WATER_DROP_STAGES.map((s, idx) => {
               const isPassed = currentStageIndex > idx || isCompleted;
@@ -177,7 +177,7 @@ export const WaterDropJourney: React.FC<WaterDropJourneyProps> = ({
                   }}
                   className={`text-left p-2 sm:p-3 rounded-xl transition-all border cursor-pointer ${
                     isCurrent
-                      ? 'bg-cyan-500 text-slate-950 font-black border-cyan-300 shadow-lg scale-102 ring-2 ring-cyan-400'
+                      ? 'bg-orange-500 text-white font-black border-orange-300 shadow-lg scale-102 ring-2 ring-orange-300'
                       : isPassed
                       ? 'bg-teal-900/60 text-white border-teal-500/40 hover:bg-teal-800/60'
                       : 'bg-white/5 text-slate-400 border-white/10 hover:bg-white/10'

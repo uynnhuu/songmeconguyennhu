@@ -92,7 +92,7 @@ export const MekongInteractiveHub: React.FC<MekongInteractiveHubProps> = ({
       }} />
 
       {/* Sub navigation bar for the 6 interactive modules */}
-      <div className="bg-white rounded-2xl p-2 border border-slate-200 shadow-xs">
+      <div className="bg-white rounded-2xl p-2 border border-orange-200 shadow-xs">
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2">
           {modules.map((m) => {
             const isSelected = activeModule === m.id;
@@ -102,14 +102,14 @@ export const MekongInteractiveHub: React.FC<MekongInteractiveHubProps> = ({
                 onClick={() => setActiveModule(m.id)}
                 className={`p-3 rounded-xl border text-left transition-all cursor-pointer flex flex-col justify-between ${
                   isSelected
-                    ? 'bg-gradient-to-br from-sky-600 to-blue-700 text-white font-bold border-sky-500 shadow-md scale-102 ring-2 ring-sky-300'
-                    : 'bg-slate-50 border-slate-200 hover:bg-slate-100 text-slate-700'
+                    ? 'bg-gradient-to-br from-orange-500 to-emerald-600 text-white font-bold border-orange-400 shadow-md scale-102 ring-2 ring-orange-300'
+                    : 'bg-emerald-50/40 border-emerald-200/80 hover:bg-orange-50/70 text-emerald-950'
                 }`}
               >
                 <div className="flex items-center justify-between text-xs mb-1">
                   <span className="text-xl">{m.icon}</span>
                   <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded-md ${
-                    isSelected ? 'bg-white/20 text-white' : 'bg-slate-200 text-slate-600'
+                    isSelected ? 'bg-white/25 text-white' : 'bg-orange-100 text-orange-800'
                   }`}>
                     {m.badge}
                   </span>

@@ -44,11 +44,11 @@ export const VietnamConnection: React.FC<{
   return (
     <div className="space-y-6">
       {/* Header Banner */}
-      <div className="bg-gradient-to-r from-emerald-900 via-teal-900 to-sky-950 text-white rounded-2xl p-6 shadow-md relative overflow-hidden">
+      <div className="bg-gradient-to-r from-emerald-950 via-emerald-900 to-orange-950 text-white rounded-2xl p-6 shadow-md border border-orange-500/40 relative overflow-hidden">
         <div className="relative z-10">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div>
-              <span className="px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">
+              <span className="px-2.5 py-1 rounded-full text-xs font-semibold bg-orange-500/25 text-orange-200 border border-orange-400/40">
                 Trọng tâm Chuyên đề Địa lí 11 - Sông Mê Công & Việt Nam
               </span>
               <h1 className="text-2xl sm:text-3xl font-black mt-2 tracking-tight">
@@ -64,7 +64,7 @@ export const VietnamConnection: React.FC<{
             <div className="flex items-center gap-2">
               <button
                 onClick={() => onPlayGame('simulator')}
-                className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs shadow-md transition-transform hover:scale-105"
+                className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-400 hover:to-amber-400 text-white font-bold text-xs shadow-md transition-transform hover:scale-105 cursor-pointer"
               >
                 <Gamepad2 className="w-4 h-4" />
                 <span>Thử Thách Điều Phối Nước</span>
@@ -76,48 +76,48 @@ export const VietnamConnection: React.FC<{
           <div className="flex flex-wrap gap-2 mt-5 pt-4 border-t border-emerald-800/60">
             <button
               onClick={() => setActiveTab('cascade')}
-              className={`px-3.5 py-1.5 rounded-lg text-xs font-black transition-all shadow-xs ${
-                activeTab === 'cascade' ? 'bg-amber-400 text-slate-950 ring-2 ring-amber-300' : 'bg-emerald-800/70 text-amber-200 hover:bg-emerald-700/80 border border-amber-400/40'
+              className={`px-3.5 py-1.5 rounded-lg text-xs font-black transition-all shadow-xs cursor-pointer ${
+                activeTab === 'cascade' ? 'bg-orange-500 text-white ring-2 ring-orange-300' : 'bg-emerald-900/70 text-orange-200 hover:bg-emerald-800/80 border border-orange-400/40'
               }`}
             >
               🌊 Chuỗi: Mê Kông ↓ ĐBSCL ↓ Hậu Giang 📍
             </button>
             <button
               onClick={() => setActiveTab('overview')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors ${
-                activeTab === 'overview' ? 'bg-white text-emerald-950' : 'text-emerald-200 hover:bg-white/10'
+              className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors cursor-pointer ${
+                activeTab === 'overview' ? 'bg-white text-emerald-950 font-bold' : 'text-emerald-100 hover:bg-white/10'
               }`}
             >
               🌿 Vị Thế & Mùa Nước Nổi
             </button>
             <button
               onClick={() => setActiveTab('estuaries')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors ${
-                activeTab === 'estuaries' ? 'bg-white text-emerald-950' : 'text-emerald-200 hover:bg-white/10'
+              className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors cursor-pointer ${
+                activeTab === 'estuaries' ? 'bg-white text-emerald-950 font-bold' : 'text-emerald-100 hover:bg-white/10'
               }`}
             >
               🐉 Huyền Thoại 9 Cửa Sông (Cửu Long)
             </button>
             <button
               onClick={() => setActiveTab('challenges')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors ${
-                activeTab === 'challenges' ? 'bg-white text-emerald-950' : 'text-emerald-200 hover:bg-white/10'
+              className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors cursor-pointer ${
+                activeTab === 'challenges' ? 'bg-white text-emerald-950 font-bold' : 'text-emerald-100 hover:bg-white/10'
               }`}
             >
               ⚠️ Nguy Cơ Xâm Nhập Mặn & Thiếu Phù Sa
             </button>
             <button
               onClick={() => setActiveTab('thuanthien')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors ${
-                activeTab === 'thuanthien' ? 'bg-white text-emerald-950' : 'text-emerald-200 hover:bg-white/10'
+              className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors cursor-pointer ${
+                activeTab === 'thuanthien' ? 'bg-white text-emerald-950 font-bold' : 'text-emerald-100 hover:bg-white/10'
               }`}
             >
               🛡️ Triết Lý "Thuận Thiên" (NQ 120)
             </button>
             <button
               onClick={() => setActiveTab('haugiang')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-colors ${
-                activeTab === 'haugiang' ? 'bg-white text-slate-950 shadow-xs' : 'text-emerald-200 hover:bg-white/10'
+              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-colors cursor-pointer ${
+                activeTab === 'haugiang' ? 'bg-white text-emerald-950 shadow-xs' : 'text-emerald-100 hover:bg-white/10'
               }`}
             >
               🌾 Kênh Xáng Xà No & FPT Vị Thủy

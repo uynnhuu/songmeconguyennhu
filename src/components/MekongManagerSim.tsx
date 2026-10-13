@@ -112,12 +112,12 @@ export const MekongManagerSim: React.FC<MekongManagerSimProps> = ({
   return (
     <div className="space-y-6 max-w-5xl mx-auto">
       {/* Header Banner */}
-      <div className="bg-gradient-to-r from-teal-900 via-emerald-950 to-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-xl relative overflow-hidden border border-teal-800/60">
+      <div className="bg-gradient-to-r from-blue-950 via-blue-900 to-orange-900 text-white rounded-3xl p-6 sm:p-8 shadow-xl relative overflow-hidden border border-orange-500/40">
         <div className="relative z-10 flex flex-wrap items-center justify-between gap-4">
           <div>
             <div className="flex items-center gap-2 mb-2">
-              <span className="px-3 py-1 rounded-full text-xs font-black bg-emerald-400 text-slate-950 flex items-center gap-1.5 shadow-xs">
-                <Scale className="w-3.5 h-3.5 text-slate-950" />
+              <span className="px-3 py-1 rounded-full text-xs font-black bg-orange-500 text-white flex items-center gap-1.5 shadow-xs">
+                <Scale className="w-3.5 h-3.5 text-white" />
                 Mô Phỏng Quản Trị Ra Quyết Định
               </span>
               <span className="text-xs text-teal-200 hidden sm:inline">6 Tình huống nan giải thực tế</span>

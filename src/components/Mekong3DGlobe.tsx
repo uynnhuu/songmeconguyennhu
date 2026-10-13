@@ -440,10 +440,10 @@ export const Mekong3DGlobe: React.FC<Mekong3DGlobeProps> = ({
     const riverPoints = riverCurve.getPoints(240);
     const riverGeo = new THREE.BufferGeometry().setFromPoints(riverPoints);
     const riverMat = new THREE.LineBasicMaterial({
-      color: 0x00f5d4,
+      color: 0xf97316, // Vibrant Orange Mekong River
       linewidth: 3,
       transparent: true,
-      opacity: 0.95
+      opacity: 0.98
     });
     const riverLine = new THREE.Line(riverGeo, riverMat);
     globeMesh.add(riverLine);
@@ -465,8 +465,8 @@ export const Mekong3DGlobe: React.FC<Mekong3DGlobeProps> = ({
     const particleGeo = new THREE.BufferGeometry();
     particleGeo.setAttribute('position', new THREE.BufferAttribute(particlePositions, 3));
     const particleMat = new THREE.PointsMaterial({
-      color: 0x38bdf8,
-      size: 3.8,
+      color: 0xfb923c, // Bright Orange-Gold flow particles
+      size: 4.0,
       transparent: true,
       opacity: 0.95,
       blending: THREE.AdditiveBlending
@@ -845,17 +845,17 @@ export const Mekong3DGlobe: React.FC<Mekong3DGlobeProps> = ({
   return (
     <div className="space-y-6">
       {/* Top Banner Introduction */}
-      <div className="bg-gradient-to-r from-slate-900 via-sky-950 to-teal-950 text-white rounded-2xl p-6 shadow-xl border border-sky-800/40 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-radial from-sky-500/10 via-teal-500/5 to-transparent pointer-events-none" />
+      <div className="bg-gradient-to-r from-emerald-950 via-emerald-900 to-orange-950 text-white rounded-2xl p-6 shadow-xl border border-orange-500/40 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-radial from-orange-500/15 via-emerald-500/10 to-transparent pointer-events-none" />
 
         <div className="relative z-10 flex flex-wrap items-center justify-between gap-4">
           <div>
             <div className="flex items-center gap-2 flex-wrap">
-              <span className="px-3 py-1 rounded-full text-xs font-bold bg-sky-500/20 text-sky-300 border border-sky-400/30 flex items-center gap-1.5">
-                <Globe className="w-3.5 h-3.5 text-sky-400 animate-spin-slow" />
+              <span className="px-3 py-1 rounded-full text-xs font-bold bg-orange-500/25 text-orange-200 border border-orange-400/40 flex items-center gap-1.5">
+                <Globe className="w-3.5 h-3.5 text-orange-400 animate-spin-slow" />
                 Quả Địa Cầu 3D Sông Mê Công • Three.js Engine
               </span>
-              <span className="px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/20 text-amber-300 border border-amber-400/30">
+              <span className="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/25 text-emerald-200 border border-emerald-400/40">
                 Chuyển Giao 6 Quốc Gia & Dòng Chảy Thủy Văn
               </span>
             </div>
@@ -863,7 +863,7 @@ export const Mekong3DGlobe: React.FC<Mekong3DGlobeProps> = ({
             <h1 className="text-2xl sm:text-3xl font-black mt-2 tracking-tight text-white flex items-center gap-2.5">
               <span>Hành Trình Mạch Sống Mê Kông Qua 6 Quốc Gia Trên Quả Địa Cầu 3D</span>
             </h1>
-            <p className="text-slate-300 text-sm max-w-4xl mt-1 leading-relaxed">
+            <p className="text-emerald-100 text-sm max-w-4xl mt-1 leading-relaxed">
               Mô hình địa cầu 3D tương tác tự do (xoay, zoom, bay chuyển cảnh). Khám phá sự chuyển tiếp của dòng sông dài 4.763 km 
               từ <strong>Trung Quốc 🇨🇳</strong> qua <strong>Myanmar 🇲🇲</strong>, <strong>Lào 🇱🇦</strong>, <strong>Thái Lan 🇹🇭</strong>, 
               <strong>Campuchia 🇰🇭</strong> đến <strong>Việt Nam 🇻🇳</strong> qua 4 chế độ xem: <em>Vệ tinh, Địa hình, Giao thông và Lưu lượng nước</em>.
@@ -875,15 +875,15 @@ export const Mekong3DGlobe: React.FC<Mekong3DGlobeProps> = ({
               href="/interactive_globe.html"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2.5 rounded-xl bg-gradient-to-r from-amber-400 via-sky-400 to-cyan-400 hover:from-amber-300 hover:to-cyan-300 text-slate-950 font-black text-xs flex items-center gap-2 shadow-xl hover:shadow-cyan-500/30 transition-all cursor-pointer ring-2 ring-white/30"
+              className="px-4 py-2.5 rounded-xl bg-gradient-to-r from-orange-500 via-orange-600 to-emerald-600 hover:from-orange-400 hover:to-emerald-500 text-white font-black text-xs flex items-center gap-2 shadow-xl hover:shadow-orange-500/40 transition-all cursor-pointer ring-2 ring-orange-300/60"
               title="Mở Quả Cầu 3D Toàn Cầu: Hiển thị tất cả các nước trên thế giới & Thời tiết mưa nắng trực tiếp"
             >
-              <Globe className="w-4 h-4 text-slate-950" />
+              <Globe className="w-4 h-4 text-white" />
               <span>🌍 Quả Cầu 3D Toàn Cầu (Mưa Nắng & Mọi Quốc Gia) ↗</span>
             </a>
             <button
               onClick={() => handleSelectCountry(5)} // Focus Vietnam
-              className="px-4 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs flex items-center gap-2 shadow-lg transition-all cursor-pointer"
+              className="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex items-center gap-2 shadow-lg transition-all cursor-pointer border border-emerald-400/40"
             >
               <span>🇻🇳 Xem ĐBSCL & 9 Cửa Sông</span>
               <ArrowRight className="w-4 h-4" />
@@ -891,9 +891,9 @@ export const Mekong3DGlobe: React.FC<Mekong3DGlobeProps> = ({
             {onOpenAssistantHelp && (
               <button
                 onClick={onOpenAssistantHelp}
-                className="px-3.5 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs flex items-center gap-1.5 transition-colors cursor-pointer"
+                className="px-3.5 py-2.5 rounded-xl bg-white/15 hover:bg-white/25 text-white font-semibold text-xs flex items-center gap-1.5 transition-colors cursor-pointer"
               >
-                <Sparkles className="w-3.5 h-3.5 text-amber-300" />
+                <Sparkles className="w-3.5 h-3.5 text-orange-300" />
                 <span>Hỏi Trợ Lý Kiến Sáng</span>
               </button>
             )}
@@ -902,10 +902,10 @@ export const Mekong3DGlobe: React.FC<Mekong3DGlobeProps> = ({
       </div>
 
       {/* 4 Main View Modes Selection Bar */}
-      <div className="bg-white rounded-2xl p-4 shadow-sm border border-slate-200">
+      <div className="bg-white rounded-2xl p-4 shadow-sm border border-orange-200/80">
         <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
           <div>
-            <span className="text-xs font-bold text-slate-500 uppercase tracking-wider block">
+            <span className="text-xs font-bold text-emerald-950 uppercase tracking-wider block">
               Chọn 4 Chế Độ Xem Quả Địa Cầu:
             </span>
             <div className="flex flex-wrap items-center gap-2 mt-2">
@@ -914,11 +914,11 @@ export const Mekong3DGlobe: React.FC<Mekong3DGlobeProps> = ({
                 onClick={() => setViewMode('satellite')}
                 className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
                   viewMode === 'satellite'
-                    ? 'bg-sky-600 text-white shadow-md ring-2 ring-sky-300'
-                    : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
+                    ? 'bg-gradient-to-r from-orange-500 to-emerald-600 text-white shadow-md ring-2 ring-orange-300'
+                    : 'bg-emerald-50/80 hover:bg-orange-50 text-emerald-950 border border-emerald-200/70'
                 }`}
               >
-                <Eye className="w-4 h-4 text-sky-300" />
+                <Eye className={`w-4 h-4 ${viewMode === 'satellite' ? 'text-white' : 'text-emerald-600'}`} />
                 <div className="text-left">
                   <div>Vệ Tinh (Satellite)</div>
                   <span className="text-[10px] font-normal opacity-85 hidden sm:inline">Hình ảnh không gian & thảm thực vật</span>
@@ -930,11 +930,11 @@ export const Mekong3DGlobe: React.FC<Mekong3DGlobeProps> = ({
                 onClick={() => setViewMode('terrain')}
                 className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
                   viewMode === 'terrain'
-                    ? 'bg-amber-600 text-white shadow-md ring-2 ring-amber-300'
-                    : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
+                    ? 'bg-gradient-to-r from-orange-500 to-amber-600 text-white shadow-md ring-2 ring-orange-300'
+                    : 'bg-emerald-50/80 hover:bg-orange-50 text-emerald-950 border border-emerald-200/70'
                 }`}
               >
-                <Mountain className="w-4 h-4 text-amber-300" />
+                <Mountain className={`w-4 h-4 ${viewMode === 'terrain' ? 'text-white' : 'text-orange-600'}`} />
                 <div className="text-left">
                   <div>Địa Hình (Terrain)</div>
                   <span className="text-[10px] font-normal opacity-85 hidden sm:inline">Độ cao Tây Tạng đến ĐBSCL</span>
@@ -946,11 +946,11 @@ export const Mekong3DGlobe: React.FC<Mekong3DGlobeProps> = ({
                 onClick={() => setViewMode('transport')}
                 className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
                   viewMode === 'transport'
-                    ? 'bg-indigo-600 text-white shadow-md ring-2 ring-indigo-300'
-                    : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
+                    ? 'bg-gradient-to-r from-orange-500 to-emerald-600 text-white shadow-md ring-2 ring-orange-300'
+                    : 'bg-emerald-50/80 hover:bg-orange-50 text-emerald-950 border border-emerald-200/70'
                 }`}
               >
-                <Ship className="w-4 h-4 text-indigo-300" />
+                <Ship className={`w-4 h-4 ${viewMode === 'transport' ? 'text-white' : 'text-emerald-600'}`} />
                 <div className="text-left">
                   <div>Giao Thông & Hạ Tầng</div>
                   <span className="text-[10px] font-normal opacity-85 hidden sm:inline">Đường thủy, Cảng biển & Đập</span>
@@ -962,11 +962,11 @@ export const Mekong3DGlobe: React.FC<Mekong3DGlobeProps> = ({
                 onClick={() => setViewMode('hydrology')}
                 className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
                   viewMode === 'hydrology'
-                    ? 'bg-teal-600 text-white shadow-md ring-2 ring-teal-300'
-                    : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
+                    ? 'bg-gradient-to-r from-orange-500 to-emerald-600 text-white shadow-md ring-2 ring-orange-300'
+                    : 'bg-emerald-50/80 hover:bg-orange-50 text-emerald-950 border border-emerald-200/70'
                 }`}
               >
-                <Droplets className="w-4 h-4 text-teal-300" />
+                <Droplets className={`w-4 h-4 ${viewMode === 'hydrology' ? 'text-white' : 'text-orange-600'}`} />
                 <div className="text-left">
                   <div>Lưu Lượng Nước & Thủy Văn</div>
                   <span className="text-[10px] font-normal opacity-85 hidden sm:inline">Dòng chảy m³/s & Biểu đồ mùa</span>
@@ -977,37 +977,37 @@ export const Mekong3DGlobe: React.FC<Mekong3DGlobeProps> = ({
 
           {/* Seasonal Flow Mode (When in Hydrology Mode) */}
           {viewMode === 'hydrology' && (
-            <div className="bg-teal-50 border border-teal-200 p-3 rounded-xl flex items-center gap-3">
-              <span className="text-xs font-bold text-teal-900 flex items-center gap-1">
-                <Activity className="w-3.5 h-3.5 text-teal-600" />
+            <div className="bg-orange-50/80 border border-orange-200 p-3 rounded-xl flex items-center gap-3">
+              <span className="text-xs font-bold text-emerald-950 flex items-center gap-1">
+                <Activity className="w-3.5 h-3.5 text-orange-600" />
                 Mùa dòng chảy:
               </span>
-              <div className="flex items-center gap-1.5 bg-white p-1 rounded-lg border border-teal-200">
+              <div className="flex items-center gap-1.5 bg-white p-1 rounded-lg border border-orange-200">
                 <button
                   onClick={() => setSeasonMode('flood')}
-                  className={`px-2.5 py-1 text-xs rounded-md font-bold transition-all ${
+                  className={`px-2.5 py-1 text-xs rounded-md font-bold transition-all cursor-pointer ${
                     seasonMode === 'flood'
-                      ? 'bg-cyan-600 text-white shadow-xs'
-                      : 'text-slate-600 hover:bg-slate-100'
+                      ? 'bg-emerald-600 text-white shadow-xs'
+                      : 'text-slate-600 hover:bg-emerald-50'
                   }`}
                 >
                   🌊 Mùa Lũ (Tháng 6 - 11)
                 </button>
                 <button
                   onClick={() => setSeasonMode('dry')}
-                  className={`px-2.5 py-1 text-xs rounded-md font-bold transition-all ${
+                  className={`px-2.5 py-1 text-xs rounded-md font-bold transition-all cursor-pointer ${
                     seasonMode === 'dry'
-                      ? 'bg-amber-600 text-white shadow-xs'
-                      : 'text-slate-600 hover:bg-slate-100'
+                      ? 'bg-orange-500 text-white shadow-xs'
+                      : 'text-slate-600 hover:bg-orange-50'
                   }`}
                 >
                   ☀️ Mùa Khô (Tháng 12 - 5)
                 </button>
                 <button
                   onClick={() => setSeasonMode('average')}
-                  className={`px-2.5 py-1 text-xs rounded-md font-bold transition-all ${
+                  className={`px-2.5 py-1 text-xs rounded-md font-bold transition-all cursor-pointer ${
                     seasonMode === 'average'
-                      ? 'bg-teal-700 text-white shadow-xs'
+                      ? 'bg-gradient-to-r from-orange-500 to-emerald-600 text-white shadow-xs'
                       : 'text-slate-600 hover:bg-slate-100'
                   }`}
                 >
@@ -1059,21 +1059,21 @@ export const Mekong3DGlobe: React.FC<Mekong3DGlobeProps> = ({
             <button
               onClick={handleFocusDelta}
               title="Bay đến Đồng bằng Sông Cửu Long & 9 Cửa Sông"
-              className="px-2.5 py-1.5 bg-emerald-900/60 hover:bg-emerald-800/80 text-emerald-200 text-xs font-semibold rounded-lg flex items-center gap-1 transition-colors cursor-pointer"
+              className="px-2.5 py-1.5 bg-orange-600/80 hover:bg-orange-500 text-white text-xs font-semibold rounded-lg flex items-center gap-1 transition-colors cursor-pointer"
             >
-              <MapPin className="w-3.5 h-3.5 text-emerald-400" />
+              <MapPin className="w-3.5 h-3.5 text-white" />
               <span>ĐBSCL (Việt Nam)</span>
             </button>
           </div>
 
           {/* Quick Toggle Overlays */}
-          <div className="bg-slate-900/80 backdrop-blur-md px-3 py-2 rounded-xl border border-slate-700/70 text-xs text-slate-300 flex items-center gap-3">
+          <div className="bg-emerald-950/85 backdrop-blur-md px-3 py-2 rounded-xl border border-orange-500/40 text-xs text-emerald-100 flex items-center gap-3">
             <label className="flex items-center gap-1.5 cursor-pointer hover:text-white">
               <input
                 type="checkbox"
                 checked={showStations}
                 onChange={(e) => setShowStations(e.target.checked)}
-                className="rounded text-sky-600 focus:ring-0"
+                className="rounded text-orange-500 focus:ring-0"
               />
               <span>Trạm Thủy Văn</span>
             </label>
@@ -1082,25 +1082,25 @@ export const Mekong3DGlobe: React.FC<Mekong3DGlobeProps> = ({
                 type="checkbox"
                 checked={showTransport}
                 onChange={(e) => setShowTransport(e.target.checked)}
-                className="rounded text-indigo-600 focus:ring-0"
+                className="rounded text-emerald-500 focus:ring-0"
               />
               <span>Đập & Cảng Thủy</span>
             </label>
           </div>
 
           {/* Real-time Weather Ticker along Mekong */}
-          <div className="bg-sky-950/85 backdrop-blur-md px-3 py-1.5 rounded-xl border border-sky-500/40 text-[11px] text-sky-200 flex items-center gap-2 overflow-x-auto shadow-lg">
-            <span className="font-bold text-amber-300 flex items-center gap-1 shrink-0">
+          <div className="bg-emerald-950/90 backdrop-blur-md px-3 py-1.5 rounded-xl border border-orange-500/50 text-[11px] text-emerald-100 flex items-center gap-2 overflow-x-auto shadow-lg">
+            <span className="font-bold text-orange-400 flex items-center gap-1 shrink-0">
               <span>🌦️ Mưa nắng:</span>
             </span>
             <span className="shrink-0 text-amber-200">Hà Nội 31°C ☀️</span>
-            <span className="text-sky-600">•</span>
-            <span className="shrink-0 text-cyan-200">Cần Thơ 28°C 🌧️</span>
-            <span className="text-sky-600">•</span>
+            <span className="text-emerald-600">•</span>
+            <span className="shrink-0 text-emerald-200">Cần Thơ 28°C 🌧️</span>
+            <span className="text-emerald-600">•</span>
             <span className="shrink-0 text-amber-200">Vientiane 33°C ☀️</span>
-            <span className="text-sky-600">•</span>
+            <span className="text-emerald-600">•</span>
             <span className="shrink-0 text-purple-200">Phnom Penh 30°C ⛈️</span>
-            <span className="text-sky-600">•</span>
+            <span className="text-emerald-600">•</span>
             <span className="shrink-0 text-amber-200">Bangkok 34°C ☀️</span>
           </div>
         </div>
@@ -1143,15 +1143,15 @@ export const Mekong3DGlobe: React.FC<Mekong3DGlobeProps> = ({
 
         {/* Bottom Floating Control Panel: 6-Country Flow Transit Timeline */}
         <div className="absolute bottom-4 left-4 right-4 z-20">
-          <div className="bg-slate-900/95 backdrop-blur-xl border border-slate-700/90 rounded-2xl p-4 shadow-2xl">
+          <div className="bg-emerald-950/95 backdrop-blur-xl border border-orange-500/40 rounded-2xl p-4 shadow-2xl">
             {/* Header with Country Stepper & Play/Pause */}
-            <div className="flex flex-wrap items-center justify-between gap-3 mb-3 pb-3 border-b border-slate-800">
+            <div className="flex flex-wrap items-center justify-between gap-3 mb-3 pb-3 border-b border-emerald-900">
               <div className="flex items-center gap-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping" />
-                <span className="text-xs font-black uppercase tracking-wider text-slate-400">
+                <span className="w-2.5 h-2.5 rounded-full bg-orange-400 animate-ping" />
+                <span className="text-xs font-black uppercase tracking-wider text-emerald-200">
                   Hành Trình Chuyển Giao Dòng Chảy 6 Quốc Gia:
                 </span>
-                <span className="px-2 py-0.5 rounded-full text-xs font-bold bg-sky-500/20 text-sky-300 border border-sky-400/30">
+                <span className="px-2 py-0.5 rounded-full text-xs font-bold bg-orange-500/25 text-orange-300 border border-orange-400/40">
                   Quốc gia {activeCountry.order}/6: {activeCountry.country} {activeCountry.flag}
                 </span>
               </div>
@@ -1162,8 +1162,8 @@ export const Mekong3DGlobe: React.FC<Mekong3DGlobeProps> = ({
                   onClick={() => setIsPlayingTour(!isPlayingTour)}
                   className={`px-3 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer ${
                     isPlayingTour 
-                      ? 'bg-amber-500 text-slate-950 shadow-md' 
-                      : 'bg-sky-600 hover:bg-sky-500 text-white'
+                      ? 'bg-orange-500 text-white shadow-md' 
+                      : 'bg-blue-600 hover:bg-blue-500 text-white'
                   }`}
                 >
                   {isPlayingTour ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5" />}
@@ -1176,8 +1176,8 @@ export const Mekong3DGlobe: React.FC<Mekong3DGlobeProps> = ({
                   title="Nghe Kiến Sáng đọc thuyết minh bằng tiếng Việt"
                   className={`px-3 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer ${
                     isSpeaking 
-                      ? 'bg-emerald-500 text-slate-950 animate-pulse' 
-                      : 'bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700'
+                      ? 'bg-orange-500 text-white animate-pulse' 
+                      : 'bg-blue-900 hover:bg-blue-800 text-blue-100 border border-blue-700'
                   }`}
                 >
                   {isSpeaking ? <VolumeX className="w-3.5 h-3.5" /> : <Volume2 className="w-3.5 h-3.5" />}
@@ -1188,14 +1188,14 @@ export const Mekong3DGlobe: React.FC<Mekong3DGlobeProps> = ({
                   <button
                     onClick={handlePrevCountry}
                     title="Nước trước đó"
-                    className="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white cursor-pointer"
+                    className="p-1.5 rounded-lg bg-blue-900 hover:bg-blue-800 text-blue-200 hover:text-white cursor-pointer"
                   >
                     <ChevronLeft className="w-4 h-4" />
                   </button>
                   <button
                     onClick={handleNextCountry}
                     title="Nước tiếp theo"
-                    className="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white cursor-pointer"
+                    className="p-1.5 rounded-lg bg-blue-900 hover:bg-blue-800 text-blue-200 hover:text-white cursor-pointer"
                   >
                     <ChevronRight className="w-4 h-4" />
                   </button>
@@ -1213,8 +1213,8 @@ export const Mekong3DGlobe: React.FC<Mekong3DGlobeProps> = ({
                     onClick={() => handleSelectCountry(idx)}
                     className={`p-2.5 rounded-xl border text-left transition-all cursor-pointer ${
                       isActive
-                        ? 'bg-gradient-to-r from-sky-900 to-teal-900 border-sky-400 ring-2 ring-sky-400/50 shadow-lg text-white'
-                        : 'bg-slate-800/80 hover:bg-slate-800 border-slate-700 text-slate-300 hover:text-white'
+                        ? 'bg-gradient-to-r from-orange-600 to-emerald-600 border-orange-300 ring-2 ring-orange-400/60 shadow-lg text-white'
+                        : 'bg-emerald-900/70 hover:bg-emerald-900 border-emerald-800 text-emerald-200 hover:text-white'
                     }`}
                   >
                     <div className="flex items-center justify-between text-xs">
@@ -1223,14 +1223,14 @@ export const Mekong3DGlobe: React.FC<Mekong3DGlobeProps> = ({
                         <span className="truncate">{item.country}</span>
                       </span>
                       <span className={`text-[10px] font-mono px-1.5 py-0.2 rounded ${
-                        isActive ? 'bg-sky-400 text-slate-950 font-bold' : 'bg-slate-700 text-slate-300'
+                        isActive ? 'bg-white text-emerald-950 font-bold' : 'bg-emerald-950 text-orange-300'
                       }`}>
                         #{item.order}
                       </span>
                     </div>
-                    <div className="mt-1 flex items-center justify-between text-[11px] text-slate-400">
+                    <div className="mt-1 flex items-center justify-between text-[11px] text-emerald-200">
                       <span>{item.lengthKm} km</span>
-                      <span className="text-teal-400 font-bold">{item.waterContributionPercent}% nước</span>
+                      <span className="text-orange-300 font-bold">{item.waterContributionPercent}% nước</span>
                     </div>
                   </button>
                 );
@@ -1241,22 +1241,22 @@ export const Mekong3DGlobe: React.FC<Mekong3DGlobeProps> = ({
       </div>
 
       {/* Country Flow Transit Detail Card (Synchronized with active 3D Country) */}
-      <div className="bg-gradient-to-br from-white via-slate-50 to-sky-50 rounded-2xl p-6 border border-slate-200 shadow-md">
-        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 pb-4 border-b border-slate-200">
+      <div className="bg-gradient-to-br from-white via-orange-50/40 to-emerald-50/60 rounded-2xl p-6 border border-orange-200/80 shadow-md">
+        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 pb-4 border-b border-emerald-100">
           <div className="flex items-center gap-3">
-            <span className="text-4xl p-2 bg-white rounded-2xl shadow-xs border border-slate-200">
+            <span className="text-4xl p-2 bg-white rounded-2xl shadow-xs border border-orange-200">
               {activeCountry.flag}
             </span>
             <div>
               <div className="flex items-center gap-2">
-                <h3 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
+                <h3 className="text-xl sm:text-2xl font-black text-emerald-950 tracking-tight">
                   {activeCountry.country} • {activeCountry.localName}
                 </h3>
-                <span className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-sky-100 text-sky-800 border border-sky-200">
+                <span className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-orange-100 text-orange-800 border border-orange-300">
                   Chặng {activeCountry.order} của 6 quốc gia
                 </span>
               </div>
-              <p className="text-xs text-slate-500 mt-0.5">
+              <p className="text-xs text-slate-600 mt-0.5">
                 Khu vực: {activeCountry.capital} • Cao độ: {activeCountry.elevationM}
               </p>
             </div>
@@ -1267,8 +1267,8 @@ export const Mekong3DGlobe: React.FC<Mekong3DGlobeProps> = ({
               onClick={speakCountrySummary}
               className={`px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-2 shadow-xs transition-colors cursor-pointer ${
                 isSpeaking
-                  ? 'bg-emerald-600 text-white animate-pulse'
-                  : 'bg-sky-600 hover:bg-sky-700 text-white'
+                  ? 'bg-orange-600 text-white animate-pulse'
+                  : 'bg-gradient-to-r from-orange-500 to-emerald-600 hover:from-orange-400 hover:to-emerald-500 text-white'
               }`}
             >
               <Volume2 className="w-4 h-4" />
@@ -1278,7 +1278,7 @@ export const Mekong3DGlobe: React.FC<Mekong3DGlobeProps> = ({
             {activeCountry.id === 'vn' && (
               <button
                 onClick={() => onNavigateTab && onNavigateTab('vietnam')}
-                className="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-xs flex items-center gap-2 shadow-xs transition-colors cursor-pointer"
+                className="px-4 py-2 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs flex items-center gap-2 shadow-xs transition-colors cursor-pointer"
               >
                 <span>Chuyên Đề Việt Nam & 9 Cửa Sông</span>
                 <ChevronRight className="w-4 h-4" />

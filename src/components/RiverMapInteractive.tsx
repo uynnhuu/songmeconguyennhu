@@ -59,19 +59,19 @@ export const RiverMapInteractive: React.FC<{
   return (
     <div className="space-y-6">
       {/* Top Banner Stats */}
-      <div className="bg-gradient-to-r from-sky-900 via-sky-800 to-teal-900 text-white rounded-2xl p-6 shadow-md relative overflow-hidden">
-        <div className="absolute right-0 top-0 bottom-0 w-1/3 bg-radial from-teal-500/10 to-transparent pointer-events-none" />
+      <div className="bg-gradient-to-r from-emerald-950 via-emerald-900 to-orange-950 text-white rounded-2xl p-6 shadow-md border border-orange-500/40 relative overflow-hidden">
+        <div className="absolute right-0 top-0 bottom-0 w-1/3 bg-radial from-orange-500/15 to-transparent pointer-events-none" />
         
         <div className="relative z-10">
           <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
             <div>
-              <span className="px-2.5 py-1 rounded-full text-xs font-semibold bg-sky-500/30 text-sky-200 border border-sky-400/30">
+              <span className="px-2.5 py-1 rounded-full text-xs font-semibold bg-orange-500/25 text-orange-200 border border-orange-400/40">
                 Chuyên đề Địa lí 11 - Sông Mê Công & Liên Hệ Việt Nam
               </span>
               <h1 className="text-2xl sm:text-3xl font-black mt-2 tracking-tight">
                 Hành Trình Sông Mê Công: Mạch Sống 6 Quốc Gia & 9 Cửa Sông Cửu Long
               </h1>
-              <p className="text-sky-200 text-sm max-w-3xl mt-1">
+              <p className="text-emerald-100 text-sm max-w-3xl mt-1">
                 Dòng sông dài 4.763 km chảy qua 6 quốc gia: Trung Quốc, Myanmar, Lào, Thái Lan, Campuchia và Việt Nam, 
                 trước khi đổ ra Biển Đông qua <strong>9 cửa sông huyền thoại</strong> (6 cửa sông Tiền và 3 cửa sông Hậu).
               </p>
@@ -81,7 +81,7 @@ export const RiverMapInteractive: React.FC<{
               {onOpenGlobe && (
                 <button
                   onClick={onOpenGlobe}
-                  className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-gradient-to-r from-sky-400 to-teal-400 hover:from-sky-300 hover:to-teal-300 text-slate-950 font-black text-xs shadow-md transition-transform hover:scale-105 active:scale-95 cursor-pointer"
+                  className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-gradient-to-r from-orange-500 to-emerald-600 hover:from-orange-400 hover:to-emerald-500 text-white font-black text-xs shadow-md transition-transform hover:scale-105 active:scale-95 cursor-pointer"
                 >
                   <Globe className="w-3.5 h-3.5 animate-spin" style={{ animationDuration: '16s' }} />
                   <span>Quả Địa Cầu 3D</span>
@@ -89,9 +89,9 @@ export const RiverMapInteractive: React.FC<{
               )}
               <button
                 onClick={() => setViewMode('delta9')}
-                className={`flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold transition-colors shadow-xs ${
+                className={`flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold transition-colors shadow-xs cursor-pointer ${
                   viewMode === 'delta9' 
-                    ? 'bg-emerald-500 text-slate-950 ring-2 ring-white' 
+                    ? 'bg-orange-500 text-white ring-2 ring-white' 
                     : 'bg-white/15 hover:bg-white/25 text-white'
                 }`}
               >
@@ -99,7 +99,7 @@ export const RiverMapInteractive: React.FC<{
               </button>
               <button
                 onClick={onSelectVietnam}
-                className="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs shadow-md transition-transform hover:scale-105 active:scale-95"
+                className="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-orange-500 hover:bg-orange-400 text-white font-bold text-xs shadow-md transition-transform hover:scale-105 active:scale-95 cursor-pointer"
               >
                 <span>Chuyên Đề Việt Nam</span>
                 <ChevronRight className="w-4 h-4" />
@@ -108,37 +108,37 @@ export const RiverMapInteractive: React.FC<{
           </div>
 
           {/* 4 Stat Pills */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 pt-3 border-t border-sky-700/60 text-xs">
-            <div className="bg-white/10 backdrop-blur-xs rounded-xl p-3">
-              <span className="text-sky-300 block">Tổng Chiều Dài</span>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 pt-3 border-t border-blue-800/60 text-xs">
+            <div className="bg-white/10 backdrop-blur-xs rounded-xl p-3 border border-white/10">
+              <span className="text-orange-300 block font-semibold">Tổng Chiều Dài</span>
               <span className="text-base font-bold text-white">4.763 km</span>
-              <span className="text-sky-300 block text-[11px]">Hạng 12 Thế Giới, 3 Châu Á</span>
+              <span className="text-blue-200 block text-[11px]">Hạng 12 Thế Giới, 3 Châu Á</span>
             </div>
-            <div className="bg-white/10 backdrop-blur-xs rounded-xl p-3">
-              <span className="text-sky-300 block">Diện Tích Lưu Vực</span>
+            <div className="bg-white/10 backdrop-blur-xs rounded-xl p-3 border border-white/10">
+              <span className="text-orange-300 block font-semibold">Diện Tích Lưu Vực</span>
               <span className="text-base font-bold text-white">810.000 km²</span>
-              <span className="text-sky-300 block text-[11px]">6 Quốc gia cùng chia sẻ</span>
+              <span className="text-blue-200 block text-[11px]">6 Quốc gia cùng chia sẻ</span>
             </div>
-            <div className="bg-white/10 backdrop-blur-xs rounded-xl p-3">
-              <span className="text-sky-300 block">Lưu Lượng Dòng Chảy</span>
+            <div className="bg-white/10 backdrop-blur-xs rounded-xl p-3 border border-white/10">
+              <span className="text-orange-300 block font-semibold">Lưu Lượng Dòng Chảy</span>
               <span className="text-base font-bold text-white">475 tỉ m³/năm</span>
-              <span className="text-sky-300 block text-[11px]">Mùa lũ chiếm 70% - 80%</span>
+              <span className="text-blue-200 block text-[11px]">Mùa lũ chiếm 70% - 80%</span>
             </div>
-            <div className="bg-white/10 backdrop-blur-xs rounded-xl p-3">
-              <span className="text-sky-300 block">Cửa Sông Tại Việt Nam</span>
+            <div className="bg-white/10 backdrop-blur-xs rounded-xl p-3 border border-white/10">
+              <span className="text-orange-300 block font-semibold">Cửa Sông Tại Việt Nam</span>
               <span className="text-base font-bold text-white">9 Cửa (Cửu Long)</span>
-              <span className="text-sky-300 block text-[11px]">6 Cửa Sông Tiền + 3 Cửa Sông Hậu</span>
+              <span className="text-blue-200 block text-[11px]">6 Cửa Sông Tiền + 3 Cửa Sông Hậu</span>
             </div>
           </div>
         </div>
       </div>
 
       {/* 6 Countries Flow Guide Bar */}
-      <div className="bg-white rounded-2xl border border-slate-200 p-4 shadow-xs">
+      <div className="bg-white rounded-2xl border border-orange-200/80 p-4 shadow-xs">
         <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
           <div className="flex items-center gap-2">
-            <Compass className="w-4 h-4 text-sky-600" />
-            <span className="text-xs font-bold text-slate-800 uppercase tracking-wide">
+            <Compass className="w-4 h-4 text-orange-600" />
+            <span className="text-xs font-bold text-blue-950 uppercase tracking-wide">
               6 Quốc Gia Sông Mê Công Chảy Qua (Theo Chiều Xuôi Dòng Từ Thượng Đến Hạ Lưu):
             </span>
           </div>
@@ -156,24 +156,24 @@ export const RiverMapInteractive: React.FC<{
               <button
                 key={c.id}
                 onClick={() => handleSelectCountry(c.id)}
-                className={`p-2.5 rounded-xl border text-left transition-all ${
+                className={`p-2.5 rounded-xl border text-left transition-all cursor-pointer ${
                   isSelected
-                    ? 'bg-sky-50 border-sky-400 ring-2 ring-sky-300 shadow-xs'
-                    : 'bg-slate-50/70 border-slate-200 hover:bg-slate-100'
+                    ? 'bg-orange-50 border-orange-400 ring-2 ring-orange-300 shadow-xs'
+                    : 'bg-blue-50/40 border-blue-200/80 hover:bg-orange-50/60'
                 }`}
               >
                 <div className="flex items-center gap-2 mb-1">
                   <span className="text-lg leading-none">{c.flag}</span>
-                  <span className="font-bold text-xs text-slate-900 truncate">{c.country}</span>
+                  <span className="font-bold text-xs text-blue-950 truncate">{c.country}</span>
                 </div>
                 <div className="text-[11px] text-slate-600 space-y-0.5">
                   <div className="flex justify-between">
                     <span>Chiều dài:</span>
-                    <span className="font-semibold text-sky-700">{c.lengthInCountry} km</span>
+                    <span className="font-semibold text-blue-700">{c.lengthInCountry} km</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Lưu vực:</span>
-                    <span className="font-semibold text-emerald-700">{c.basinPercentage}%</span>
+                    <span className="font-semibold text-orange-600">{c.basinPercentage}%</span>
                   </div>
                 </div>
               </button>

@@ -13,10 +13,12 @@ export interface KienSangResponse {
 export const KIEN_SANG_INFO = {
   name: 'Chatbot Kiến Sáng',
   fullName: 'Trợ Lý Học Tập & Hỗ Trợ Kỹ Thuật Kiến Sáng',
+  student: 'Lê Lê Uyển Như',
+  studentId: 'FHG30019',
   school: 'Trường TH, THCS, THPT FPT Hậu Giang',
   address: '61C ấp 6, xã Vị Thủy, TP.Cần Thơ',
   version: '2.5 Smart AI Edition',
-  mission: 'Đồng hành cùng học sinh TH, THCS, THPT FPT Hậu Giang chinh phục Chuyên đề Địa lí 11 - Sông Mê Công & Đồng bằng sông Cửu Long.'
+  mission: 'Đồng hành cùng học sinh Lê Lê Uyển Như (MSHS: FHG30019) và các bạn học sinh Trường TH, THCS, THPT FPT Hậu Giang chinh phục Chuyên đề Địa lí 11 - Sông Mê Công & Đồng bằng sông Cửu Long.'
 };
 
 export const KIEN_SANG_KNOWLEDGE_BASE: KienSangResponse[] = [
@@ -128,14 +130,14 @@ export const KIEN_SANG_KNOWLEDGE_BASE: KienSangResponse[] = [
     keywords: ['hỗ trợ', 'help', 'giúp', 'cứu', 'hướng dẫn', 'làm sao', 'sử dụng'],
     category: 'Hỗ Trợ Kỹ Thuật & Sử Dụng',
     reply: `Chào bạn! Mình là Chatbot Kiến Sáng của Trường TH, THCS, THPT FPT Hậu Giang (địa chỉ: 61C ấp 6, xã Vị Thủy, TP.Cần Thơ). Mình có thể hỗ trợ bạn các nội dung sau:
-1. 📖 Giải đáp kiến thức SGK Địa lí 11 (Ủy hội MRC, 5 thủ tục nước, chuỗi đập thủy điện, ĐBSCL).
+1. 📖 Giải đáp kiến thức sông Mê Công (Ủy hội MRC, 5 thủ tục nước, chuỗi đập thủy điện, ĐBSCL).
 2. 🌊 Khám phá 5 Yêu cầu cần đạt và bản đồ lưu vực Mê Kông.
 3. 🗺️ Khám phá bản đồ số hóa và các địa điểm du lịch sinh thái ĐBSCL.
 4. 🏆 Hướng dẫn nhận Giấy chứng nhận "Đại Sứ Sông Mê Công".
 5. 🛠️ Reset điểm thám hiểm hoặc giải quyết lỗi hiển thị.
 Bạn đang cần hỗ trợ vấn đề nào cụ thể?`,
     quickAction: {
-      label: 'Mở Cẩm Nang SGK 11',
+      label: 'Mở Kiến Thức Sông Mê Công',
       actionType: 'navigate',
       target: 'knowledge'
     }
@@ -151,6 +153,21 @@ Bạn đang cần hỗ trợ vấn đề nào cụ thể?`,
       label: 'Xem Vị Trí Vị Thủy & ĐBSCL',
       actionType: 'navigate',
       target: 'tourism'
+    }
+  },
+  {
+    keywords: ['học sinh', 'tác giả', 'lê lê uyển như', 'uyển như', 'fhg30019', 'mshs', 'ai làm', 'thực hiện', 'người thực hiện'],
+    category: 'Thông Tin Học Sinh Thực Hiện',
+    reply: `🎓 **Thông Tin Học Sinh Thực Hiện Dự Án:**
+• **Họ và tên**: **Lê Lê Uyển Như**
+• **Mã số học sinh (MSHS)**: **FHG30019**
+• **Trường**: **Trường TH, THCS, THPT FPT Hậu Giang**
+• **Dự án**: Số hóa tương tác Chuyên đề Địa lí 11 – Sông Mê Công & Đồng bằng sông Cửu Long (SGK Kết nối tri thức).
+• **Nền tảng**: Bản đồ số hóa 3D trực quan, mô phỏng thủy văn và trợ lý AI Kiến Sáng hỗ trợ học sinh học tập chủ động, sáng tạo!`,
+    quickAction: {
+      label: 'Mở Cẩm Nang SGK 11',
+      actionType: 'navigate',
+      target: 'knowledge'
     }
   },
   {
@@ -170,7 +187,7 @@ Bạn hãy mở tab "Du Lịch ĐBSCL" trên thanh menu để chiêm ngưỡng b
   },
   {
     keywords: ['mrc', 'uỷ hội', 'ủy hội', 'thành lập', '1995', 'hiệp định'],
-    category: 'Kiến Thức SGK Địa Lí 11',
+    category: 'Kiến Thức Sông Mê Công',
     reply: `🏛️ Ủy hội sông Mê Công (Mekong River Commission - MRC):
 - Tiền thân: Ủy ban Mê Công (1957) và Ủy ban Lâm thời (1978).
 - Thành lập: Ngày 5-4-1995 tại Chiang Rai (Thái Lan), 4 quốc gia ký Hiệp định Hợp tác phát triển bền vững: Campuchia, Lào, Thái Lan, Việt Nam.
@@ -184,7 +201,7 @@ Bạn hãy mở tab "Du Lịch ĐBSCL" trên thanh menu để chiêm ngưỡng b
   },
   {
     keywords: ['5 thủ tục', 'thủ tục', 'pdies', 'pwum', 'pnpca', 'pmfm', 'pwq'],
-    category: 'Kiến Thức SGK Địa Lí 11',
+    category: 'Kiến Thức Sông Mê Công',
     reply: `📋 5 Thủ tục quan trọng của Ủy hội sông Mê Công (Hình 6, trang 10 SGK):
 1. PDIES (2001): Trao đổi và chia sẻ thông tin số liệu.
 2. PWUM (2003): Giám sát sử dụng nước trên dòng chính và nhánh sông.
@@ -199,7 +216,7 @@ Bạn hãy mở tab "Du Lịch ĐBSCL" trên thanh menu để chiêm ngưỡng b
   },
   {
     keywords: ['chiều dài', 'diện tích', 'lưu vực', '4763', '810000', '475'],
-    category: 'Số Liệu Trọng Tâm SGK',
+    category: 'Số Liệu Trọng Tâm Sông Mê Công',
     reply: `📊 Các số liệu "nằm lòng" của sông Mê Công (SGK Địa lí 11):
 - Chiều dài: khoảng 4.763 km (đứng thứ 12 thế giới, thứ 3 châu Á).
 - Diện tích lưu vực: 810.000 km² (Lào 25%, Thái Lan 23%, Trung Quốc 21%, Campuchia 20%, Việt Nam 8%, Myanmar 3%).
@@ -227,7 +244,7 @@ Bạn hãy mở tab "Du Lịch ĐBSCL" trên thanh menu để chiêm ngưỡng b
   },
   {
     keywords: ['kiến thức', 'tài liệu', 'số liệu chuẩn', 'sgk', 'địa lí 11', 'kết nối tri thức', 'chuyên đề', 'trang 5', 'trang 6', 'trang 10', 'trang 14'],
-    category: 'Cẩm Nang Tri Thức Chuẩn SGK Địa Lí 11',
+    category: 'Cẩm Nang Kiến Thức Sông Mê Công',
     reply: `📖 Toàn bộ kiến thức và số liệu chuẩn xác 100% từ Chuyên đề học tập Địa lí 11 (bộ sách Kết nối tri thức với cuộc sống - NXB Giáo Dục Việt Nam, trang 5 – 19):
 - Chiều dài: 4.763 km (thứ 12 thế giới, thứ 3 châu Á).
 - Diện tích lưu vực: 810.000 km² (Lào 25%, Thái Lan 23%, TQ 21%, Campuchia 20%, VN 8%, Myanmar 3%).
@@ -235,9 +252,9 @@ Bạn hãy mở tab "Du Lịch ĐBSCL" trên thanh menu để chiêm ngưỡng b
 - Đa dạng sinh học: >1.000 loài cá ngọt (thứ 2 thế giới sau Amazon).
 - 5 thủ tục kỹ thuật MRC: PDIES (2001), PWUM (2003), PNPCA (2003), PMFM (2006), PWQ (2011).
 - Vai trò Việt Nam: ĐBSCL nuôi sống >17 triệu người, đóng góp 12% GDP, 90% gạo & 53% tôm cá xuất khẩu (năm 2020); Nghị quyết 120/NQ-CP triết lý "Thuận thiên".
-Mời bạn bấm xem ngay mục "Kiến Thức SGK 11" trên thanh điều hướng!`,
+Mời bạn bấm xem ngay mục "Kiến Thức Sông Mê Công" trên thanh điều hướng!`,
     quickAction: {
-      label: 'Mở Cẩm Nang Kiến Thức SGK',
+      label: 'Mở Cẩm Nang Kiến Thức Sông Mê Công',
       actionType: 'navigate',
       target: 'knowledge'
     }
@@ -279,7 +296,7 @@ export const QUICK_SUPPORT_CHIPS = [
   '🏛️ 4. Ủy Hội MRC & Việt Nam',
   '🌾 5. Thực Tiễn ĐBSCL & Hậu Giang',
   '🔊 Chatbot đọc tiếng Việt',
-  '📖 Kiến thức SGK Địa lí 11',
+  '📖 Kiến thức sông Mê Công',
   '📋 5 thủ tục Ủy hội MRC',
   '📊 Số liệu chuẩn xác lưu vực',
   '🌱 Nghị quyết 120 "Thuận thiên"',

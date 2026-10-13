@@ -24,7 +24,7 @@ export const GeoQuizGame: React.FC<GeoQuizGameProps> = ({ onAddPoints }) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [score, setScore] = useState(0);
   const [isQuizCompleted, setIsQuizCompleted] = useState(false);
-  const [studentName, setStudentName] = useState('');
+  const [studentName, setStudentName] = useState('Lê Lê Uyển Như (FHG30019)');
   const [showCertificate, setShowCertificate] = useState(false);
 
   const question: QuizQuestion = QUIZ_QUESTIONS[currentIdx];
@@ -242,15 +242,15 @@ export const GeoQuizGame: React.FC<GeoQuizGameProps> = ({ onAddPoints }) => {
                   type="text"
                   value={studentName}
                   onChange={(e) => setStudentName(e.target.value)}
-                  placeholder="Ví dụ: Nguyễn Văn An - Lớp 11A1"
-                  className="flex-1 px-3.5 py-2 text-xs rounded-xl border border-slate-300 focus:outline-hidden focus:ring-2 focus:ring-sky-500 bg-white"
+                  placeholder="Ví dụ: Lê Lê Uyển Như - MSHS: FHG30019"
+                  className="flex-1 px-3.5 py-2 text-xs rounded-xl border border-orange-300 focus:outline-hidden focus:ring-2 focus:ring-orange-500 bg-white"
                 />
                 <button
                   onClick={() => setShowCertificate(true)}
                   disabled={!studentName.trim()}
                   className={`px-4 py-2 rounded-xl font-bold text-xs transition-colors ${
                     studentName.trim()
-                      ? 'bg-sky-600 hover:bg-sky-700 text-white shadow-xs'
+                      ? 'bg-gradient-to-r from-orange-500 to-emerald-600 hover:from-orange-600 hover:to-emerald-700 text-white shadow-xs'
                       : 'bg-slate-200 text-slate-400 cursor-not-allowed'
                   }`}
                 >
@@ -262,20 +262,20 @@ export const GeoQuizGame: React.FC<GeoQuizGameProps> = ({ onAddPoints }) => {
 
           {/* Certificate Display */}
           {showCertificate && studentName.trim() && (
-            <div className="relative bg-gradient-to-r from-amber-50 via-white to-amber-50 border-4 border-amber-300 rounded-2xl p-8 text-center space-y-4 shadow-lg animate-in fade-in">
-              <div className="flex justify-center items-center gap-2 text-amber-700">
-                <Award className="w-8 h-8 text-amber-600" />
-                <span className="text-xs font-bold uppercase tracking-widest text-amber-800">
-                  CHỨNG NHẬN ĐẠT CHUẨN KIẾN THỨC ĐỊA LÍ 11
+            <div className="relative bg-gradient-to-r from-orange-50/70 via-white to-emerald-50/70 border-4 border-orange-400 rounded-3xl p-8 text-center space-y-4 shadow-xl animate-in fade-in">
+              <div className="flex justify-center items-center gap-2 text-orange-600">
+                <Award className="w-8 h-8 text-orange-500" />
+                <span className="text-xs font-bold uppercase tracking-widest text-orange-800">
+                  TRƯỜNG TH, THCS, THPT FPT HẬU GIANG • CHỨNG NHẬN ĐỊA LÍ 11
                 </span>
               </div>
 
-              <h4 className="text-2xl font-black text-slate-900 font-serif">
+              <h4 className="text-2xl font-black text-emerald-950 font-serif">
                 ĐẠI SỨ SÔNG MÊ CÔNG & ĐỒNG BẰNG CỬU LONG
               </h4>
 
               <p className="text-xs text-slate-600">Trao tặng cho học sinh:</p>
-              <p className="text-xl font-black text-sky-800 underline decoration-amber-400 decoration-2">
+              <p className="text-xl font-black text-emerald-900 underline decoration-orange-400 decoration-2">
                 {studentName}
               </p>
 
@@ -284,9 +284,9 @@ export const GeoQuizGame: React.FC<GeoQuizGameProps> = ({ onAddPoints }) => {
                 phân tích mối liên hệ sâu sắc với kinh tế - sinh thái Đồng bằng sông Cửu Long và định hướng phát triển "Thuận thiên" bền vững.
               </p>
 
-              <div className="flex items-center justify-between pt-4 border-t border-amber-200/80 text-[11px] text-slate-700">
-                <span>Điểm kiểm tra: <strong>{score}/100</strong></span>
-                <span>Chương trình GDPT 2018 - Địa lí 11</span>
+              <div className="flex flex-wrap items-center justify-between pt-4 border-t border-orange-200/80 text-[11px] text-slate-700 gap-2">
+                <span>Điểm kiểm tra: <strong className="text-orange-600">{score}/100</strong></span>
+                <span>Trường TH, THCS, THPT FPT Hậu Giang</span>
                 <span>Ngày cấp: {new Date().toLocaleDateString('vi-VN')}</span>
               </div>
             </div>
